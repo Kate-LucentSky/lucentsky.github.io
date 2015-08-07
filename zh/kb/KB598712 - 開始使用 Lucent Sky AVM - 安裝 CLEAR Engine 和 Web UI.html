@@ -69,79 +69,79 @@ permalink: /zh/kb/598712.html
     </p>
     <ol>
         <li>
-            Double-click on the Lucent Sky AVM server setup file (<strong>CLEAR_x64.exe</strong>). The file will automatically extract and create a <strong>CLEAR_x64</strong> folder at the location of your choice.
+            在AVM 伺服器安裝檔案（<strong>CLEAR_x64.exe</strong>）上點擊滑鼠左鍵兩次，檔案將會自動解壓縮，此時你需要選定一個位置建立 <strong>CLEAR_x64</strong> 資料夾。 
         </li>
         <li>
-            Open the folder and double-click the file Setup. The setup program will launch.
+            開啟上一步建立的資料夾，在安裝檔案上點擊滑鼠左鍵兩次後，安裝程序將依下列步驟啟動：
             <ul>
                 <li>
-                    <strong>Welcome</strong> – Click <strong>Next</strong>.
+                    <strong>Welcome</strong> – 請直接點擊 <strong>[Next]</strong> 按鈕。
                 </li>
                 <li>
-                    <strong>License</strong> – Review the end-user licensing agreement (EULA), and then click <strong>Agree</strong> if you agree the EULA, or click <strong>Decline</strong> to exit the setup program.
+                    <strong>License</strong> – 請先完整閱讀此畫面的 Review the end-user licensing agreement（EULA）。若你同意此規範，請點擊 <strong>[Agree]</strong> 按鈕；若否，請擊點 <strong>[Decline]</strong> 按鈕以結束安裝程序。
                 </li>
                 <li>
-                    <strong>Activation</strong> – Enter the product key provided to you, and then click <strong>Activate License</strong>. If the server doesn't have Internet access, or you're re-running the setup program and have already activated a license, click <strong>Skip Activation</strong>.
+                    <strong>Activation</strong> – 請輸入你所持有的產品授權金鑰（product key）後點選 <strong>[Activate License]</strong> 按鈕。若此時伺服器並未連線至網路、你希望稍後重新執行安裝程序、或是此伺服器已經啟用過授權，請直接點選 <strong>[Skip Activation]</strong> 按鈕而不需入產品授權金鑰。
                 </li>
                 <li>
-                    <strong>Prerequisites</strong> – Make sure that .NET Framework 3.5, .NET Framework 4.0/4.5 and Internet Information Services (IIS) 7.0 or higher have been installed on the server. If you want to install and setup a new SQL Server Express instance for CLEAR Engine, click <strong>Install SQL Server</strong>. If you want to setup an existing SQL Server instance for CLEAR Engine, click <strong>Use Existing Database</strong>.
+                    <strong>Prerequisites</strong> – 請確定此時伺服器已安裝.NET Framework 3.5、.NET Framework 4.0/4.5 及 Internet Information Services（IIS）7.0 或更新的版本。若你希望安裝及設定新的 SQL Server Express 提供 CLEAR Engine 使用，請點選 <strong>[Install SQL Server]</strong> 按鈕；若你希望 CLEAR Engine 使用已存在的 SQL Server，請點選 <strong>[Use Existing Database]</strong> 按鈕。
                     <ul>
                         <li>
-                            <strong>Install SQL Server</strong> – Click <strong>Launch SQL Server Setup</strong> to launch the setup program of SQL Server Express. Follow the setup program to install SQL Server Express, and the setup parameters have been preconfigured so you should be able to accept the default configurations. When the installation is completed, go back to the AVM Server setup program, and then click <strong>Next</strong>.
+                            <strong>Install SQL Server</strong> – 點選 <strong>[Launch SQL Server Setup]</strong> 按鈕以執行 SQL Server Express 的安裝程式。請遵循安裝程式的步驟並直接接受預設的相關屬性設定，並在安裝完成後擊點 <strong>[Next]</strong> 按鈕。
                         </li>
                         <li>
-                            <strong>Setup SQL Server</strong> – Enter the FQDN, IP address, or the computer name, and instance name in <strong>SQL Server</strong> (for example, <em>sqlserver.contoso.com\AVMSQL</em>, where <em>sqlserver.contoso.com</em> is the FQDN of the SQL Server, and <em>AVMSQL</em> is the instance name), select the security model, as well as username and password if necessary, and then click <strong>Next</strong>.
+                            <strong>Setup SQL Server</strong> – 請輸入你想使用的 SQL Server 的相關 FQDN、IP address 或電腦名稱及資料庫的 instance name 於 <strong>SQL Server</strong> 欄位中。（舉例來說，<em>sqlserver.contoso.com\AVMSQL</em> 的 FQDN 就是 <em>sqlserver.contoso.com</em>、<em>AVMSQL</em> 則是 instance name。接著選擇你的登入模式（security）、若需要的話輸入使用者名稱及密碼，接著擊點 <strong>[Next]</strong> 按鈕。
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Install CLEAR Engine</strong> – Accept the default location for storing application repository, or choose a custom location, and then click <strong>Next</strong>. The AVM Server setup program will become unresponsive for roughly 30 to 60 seconds during this process.
+                    <strong>Install CLEAR Engine</strong> – 你可以使用預設的應用程式安裝位置、或自行輸入你想要安裝的資料夾位置後，點選 <strong>[Next]</strong>按鈕。要請你特別注意的是，AVM Server 的安裝程式可能會在接下來的30到60秒間沒有回應。
                 </li>
                 <li>
-                    <strong>Install Web UI</strong> – To install Web UI on the same server, enter the FQDN or IP that users will be accessing AVM Web UI through in <strong>Web UI FQDN</strong> or <strong>IP address</strong>, and then click <strong>Next</strong>. To install AVM Web UI on another server or to skip its installation, click <strong>Skip</strong>.
+                    <strong>Install Web UI</strong> – 若要將 AVM Web UI 安裝在同一台伺服器上，請輸入 AVM Web UI 要使用的 FQDN 或 IP 於 <strong>Web UI FQDN</strong> or <strong>IP address</strong> 欄位中、接著點選 <strong>[Next]</strong> 按鈕；若要使用其他伺服器作為 AVM Web UI 主機，請直接點選 <strong>[Skip]</strong> 按鈕。
                 </li>
                 <li>
-                    <strong>Complete</strong> – The AVM Server setup has completed.
+                    <strong>Complete</strong> – AVM 伺服器安裝完成。
                 </li>
             </ul>
         </li>
     </ol>
     <p>
-        <strong>To configure Internet Information Services (IIS) for Web UI</strong>
+        <strong>如何將 AVM Web UI　設置於 Internet Information Services（IIS）上</strong>
     </p>
     <ol>
         <li>
-            Open Internet Information Services (IIS) Manager. Under <strong>Connections</strong>, click the server that has Web UI installed.
+            開啟 <strong>[Internet Information Services 管理員]</strong> ，並在 <strong>[連線窗格]</strong> 內選擇安裝了 AVM Web UI 的伺服器。
         </li>
         <li>
-            In <strong>Features View</strong>, double-click <strong>Server Certificates</strong>. For the SSL binding of AVM Web UI, you can choose to use a self-signed certificate, to import an existing certificate, or to create a certificate request.
+            此時在右側的功能顯示窗格中，以滑鼠左鍵點擊兩次 <strong>[伺服器憑證]</strong> 項目。你可以選擇使用一個自我簽屬憑證、匯入現有憑證或建立憑證要求以供 AVM Web UI 的 SSL 使用。
             <ul>
                 <li>
-                    <strong>Creating a self-signed certificate</strong> – Under <strong>Actions</strong>, click <strong>Create Self-Signed Certificate</strong>. In the <strong>Create Self-Signed Certificate</strong> dialog, enter a descriptive name for the certificate, for example, AVM Web UI.
+                    <strong>建立自我簽屬憑證</strong> – 滑鼠右鍵點選 <strong>[伺服器憑證]</strong> 窗格中空白處後，點選 <strong>[建立自我簽屬憑證…]</strong> 。在 <strong>[建立自我簽屬憑證]</strong> 視窗中，輸入 <strong>[指定憑證的好記名稱]</strong> ，例如：「AVM Web UI」。
                 </li>
                 <li>
-                    <strong>Importing an existing certificate</strong> – Under <strong>Actions</strong>, click Import… and follow the on-screen instructions.
+                    <strong>匯入現有憑證</strong> – 滑鼠右鍵點選 <strong>[伺服器憑證]</strong> 窗格中空白處後，點選 <strong>[匯入…]</strong> ，接著輸入視窗中所需的相關資訊。
                 </li>
                 <li>
-                    <strong>Creating a certificate request</strong> – Under <strong>Actions</strong>, click Create Certificate Request and follow the on-screen instructions.
+                    <strong>建立憑證要求</strong> – 滑鼠右鍵點選 <strong>[伺服器憑證]</strong> 窗格中空白處後，點選 <strong>[建立憑證要求…]</strong>，接著輸入視窗中所需的相關資訊。
                 </li>
             </ul>
         </li>
         <li>
-            Under <strong>Connections</strong>, expand the server that has AVM Web UI installed, expand Sites, right-click on <strong>CLEAR Web</strong>, and then select <strong>Edit Bindings…</strong>
+            請於左側 <strong>[連線]</strong> 窗格之下，展開安裝了 AVM Web UI 的伺服器，接著再展開 <strong>[站台]</strong> 資料夾，並以滑鼠右鍵點選 <strong>CLEAR Web</strong> 站台、選擇 <strong>[編輯繫結…]</strong> 項目。
         </li>
         <li>
-            In the <strong>Site Bindings</strong> dialog, click <strong>Add…</strong> In the <strong>Add Site Binding</strong> dialog, select <strong>https</strong> in the <strong>Type</strong> drop-down list, change the <strong>Port</strong> if necessary, select the certificate created in step 2 in the SSL certificate drop-down list, and then click <strong>OK</strong>.
+            於 <strong>[站台繫結]</strong> 視窗下，點選 <strong>[新增(A)…]</strong> 按鈕。接著於新增站台繫結視窗中，<strong>[類型]</strong> 項目請在下拉式選單選擇 <strong>https<strong> 、若你需要，也可以改變 <strong>[連接埠]</strong> 的設定值。<strong>[SSL憑證]</strong> 則請選擇你於上個步驟建立或匯入的憑證，完成後請點選 <strong>[確定]</strong> 按鈕。
         </li>
         <li>
-            Select the http binding, and click <strong>Remove</strong>. Click <strong>Close</strong> to close the <strong>Site Bindings</strong> dialog.
+            回到 <strong>[站台繫結]</strong> 視窗後，請點選 <strong>http</strong> 項目，並點選位於右側的 <strong>[移除(R)…]</strong> 按鈕。接著請點選右下方的 <strong>[關閉]</strong> 按鈕。
         </li>
         <li>
-            Right-click on <strong>CLEAR Web</strong>, select <strong>Manage Website</strong>, and then click <strong>Start</strong>.
+            以滑鼠右鍵點選 <strong>CLEAR Web</strong> 站台、選擇 <strong>[管理網站]</strong> 下的 <strong>[啟動]</strong> 項目，讓站台開始運行。
         </li>
     </ol>
     <p>
-        To learn more about the installation and management of CLEAR Engine and Web UI, as well as system requirements, click the following article number to view the article in the Lucent Sky Knowledge Base:
+        如果想了解更多關於安裝以及管理 CLEAR Engine 和 AVM Web UI，甚至是系統需求，請參考 Lucent Sky 知識庫：
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<a href="306011">KB306011</a> Administration guide of Lucent Sky AVM Server
     </p>
@@ -152,7 +152,7 @@ permalink: /zh/kb/598712.html
         內容
     </h1>
     <p>
-        文章編號：598712 – 上次校閱：2015 年 5 月 31 日 – 版次 1.1
+        文章編號：598712 – 上次校閱：2015 年 8 月 7 日 – 版次 1.2
     </p>
     <p>
         <strong>適用於</strong>
