@@ -16,235 +16,234 @@ permalink: /zh/kb/575123.html
 
 <section class="bs-docs-section">
     <h1 id="more-information">
-        More Information
+        更多資訊
     </h1>
     <h2 id="prerequisites-for-developers">
-        Prerequisites for Developers
+        開發者需求
     </h2>
     <p>
-        Developers should be familiar with the following tools:
+        開發者應熟悉下列的工具：
     </p>
     <ul>
         <li>
-            <strong>C#, Java or VB.NET languages</strong>
+            <strong>C#、Java 或 VB.NET</strong>
             <ul>
                 <li>
-                    This guide uses C# (which has a similar syntax with Java and VB.NET) in its examples and screenshots.
+                    這篇指南的範例及截圖都是使用C#（C# 的語法跟 Java 和 VB.NET 都非常相似）。
                 </li>
             </ul>
         </li>
     </ul>
     <h2 id="using-web-ui">
-        Using Web UI
+        使用 Web UI
     </h2>
     <p>
-        In this section, you will see:
+        本段你將會看到：
     </p>
     <ul>
         <li>
-            A sample procedure for analyzing and mitigating an application with the AVM Web UI
+            如何透過 AVM Web UI 來偵測及修正應用程式的步驟
         </li>
     </ul>
     <p>
-        At the end of this section, you will be able to:
+        本段結束時，你會知道如何：
     </p>
     <ul>
         <li>
-            Create a zip file containing the source code of an application
+            建立一個包含了你的應用程式程式碼的壓縮檔案
         </li>
         <li>
-            Use Web UI to scan an application for vulnerabilities and automatically fixing them
+            使用 AVM Web UI 來掃描你的應用程式弱點並自動修正
         </li>
         <li>
-            Review the identified vulnerabilities and their Instant Fix on the AVM Web UI
+            查看 AVM Web UI 掃描的弱點及修正結果
         </li>
         <li>
-            Download the secured source code of an application from the AVM Web UI
+            透過 AVM Web UI 下載你應用程式修正過後的程式碼
         </li>
         <li>
-            Download the security report of an application from the AVM Web UI
+            透過 AVM Web UI 下載你應用程式的資安結果報告
         </li>
     </ul>
     <p>
-        <strong>To create a zip file of an application</strong>
+        <strong>建立一個應用程式的壓縮檔案</strong>
     </p>
     <ul>
         <li>
-            <strong>.NET Web Applications</strong>
+            <strong>.NET網頁應用程式（.NET Web Applications）</strong>
             <ol>
                 <li>
-                    In File Explorer, go to the root of the solution that contains the web application you want to secure. The root of the solution usually has the file <em>ContosoWeb.sln</em>, where <em>ContosoWeb</em> is the name of the solution.
+                    以檔案總管開啟你想掃描的網頁應用程式方案的根目錄，也就是包含 <em>ContosoWeb.sln</em> 檔案的目錄，其中 <em>ContosoWeb</em> 是你網頁應用程式方案的名稱。
                 </li>
                 <li>
-                    Select all directories and files, except for those belong to web applications other than the one you want to secure. You may also unselect non-code files, such as images and videos.
+                    選取全部的網頁應用程式資料夾及檔案，但你可以排除不希望掃描的檔案、或是不包含程式碼的檔案，例如圖片或影片檔。
                 </li>
                 <li>
-                    Right click on the selected files, move the mouse cursor over <strong>Send to</strong>, then click <strong>Compressed (zipped) folder</strong>. Or use your preferred archive program (such as 7-Zip) to create an archive in zip format.
+                    以滑鼠右鍵點選選擇的檔案，將滑鼠移到 <strong>[傳送到(N)]</strong> 標籤，並選擇 <strong>[壓縮的(Zipped) 資料夾]</strong>。或者你也可以使用你喜歡的壓縮軟體，例如 7-Zip 或是 WinRAR 將檔案壓縮成 zip 格式。
                 </li>
             </ol>
         </li>
     </ul>
     <ul>
         <li>
-            <strong>.NET Web Sites</strong>
+            <strong>.NET 網站</strong>
             <ol>
                 <li>
-                    1.	In File Explorer, go to the root of the web site you wish to secure. The root of the web site usually has the file <strong>web.config</strong>.
+                    以檔案總管開啟你想掃描的網站的根目錄，這個目錄通常包含 <strong>web.config</strong> 檔案。
                 </li>
                 <li>
-                    Select all files in under the root. You may unselect non-code files, such as images and videos.
+                    選取全部根目錄中包含的資料夾及檔案，但你可以排除不包含程式碼的檔案，例如圖片或影片檔。
                 </li>
                 <li>
-                    Right click on the selected files, move the mouse cursor over <strong>Send to</strong>, then click <strong>Compressed (zipped) folder</strong>. Or use your preferred archive program (such as 7-Zip) to create an archive in zip format.
+                    以滑鼠右鍵點選選擇的檔案，將滑鼠移到 <strong>[傳送到(N)]</strong> 標籤，並選擇 <strong>[壓縮的(Zipped) 資料夾]</strong>。或者你也可以使用你喜歡的壓縮軟體，例如 7-Zip 或是 WinRAR 將檔案壓縮成 zip 格式。
                 </li>
             </ol>
         </li>
     </ul>
     <ul>
         <li>
-            <strong>Java Web Applications</strong>
+            <strong>Java 網頁應用程式（Java Web Applications）</strong>
             <ol>
                 <li>
-                    In File Explorer, go to the root of the project that contains the web application you wish to secure. The root of the solution usually has the source directory (either <strong>java</strong> or <strong>src</strong>) and the web directory (usually <strong>webapp</strong> or <strong>WebContent</strong>).
+                    以檔案總管開啟你想掃描的網頁應用程式的根目錄，這個目錄通常包含來源資料夾（通常命名為 <strong>java</strong> 或 <strong>src</strong>）及網頁資料夾（通常命名為 <strong>webapp</strong> 或 <strong>WebContent</strong>）。
                 </li>
                 <li>
-                    Select all directories and files. You may also unselect non-code files, such as images and videos.
+                    選取全部根目錄中包含的資料夾及檔案，但你可以排除不包含程式碼的檔案，例如圖片或影片檔。
                 </li>
                 <li>
-                    Right click on the selected files, move the mouse cursor over <strong>Send to</strong>, then click <strong>Compressed (zipped) folder</strong>. Or use your preferred archive program (such as 7-Zip) to create an archive in zip format.
+                    以滑鼠右鍵點選選擇的檔案，將滑鼠移到 <strong>[傳送到(N)]</strong> 標籤，並選擇 <strong>[壓縮的(Zipped) 資料夾]</strong>。或者你也可以使用你喜歡的壓縮軟體，例如 7-Zip 或是 WinRAR 將檔案壓縮成 zip 格式。
                 </li>
             </ol>
         </li>
     </ul>
     <ul>
         <li>
-            <strong>Java Web Sites</strong>
+            <strong>Java 網站</strong>
             <ol>
                 <li>
-                    In File Explorer, go to the root of the web site you wish to secure. The root of the web site usually has the directory <strong>WEB-INF</strong>.
+                    以檔案總管開啟你想掃描的網站的根目錄，這個目錄通常包含資料夾 <strong>WEB-INF</strong>。
                 </li>
                 <li>
-                    Select all files in under the root. You may unselect non-code files, such as images and videos.
+                    選取全部根目錄中包含的資料夾及檔案，但你可以排除不包含程式碼的檔案，例如圖片或影片檔。
                 </li>
                 <li>
-                    Right click on the selected files, move the mouse cursor over <strong>Send to</strong>, then click <strong>Compressed (zipped) folder</strong>. Or use your preferred archive program (such as 7-Zip) to create an archive in zip format.
+                    以滑鼠右鍵點選選擇的檔案，將滑鼠移到 <strong>[傳送到(N)]</strong> 標籤，並選擇 <strong>[壓縮的(Zipped) 資料夾]</strong>。或者你也可以使用你喜歡的壓縮軟體，例如 7-Zip 或是 WinRAR 將檔案壓縮成 zip 格式。
                 </li>
             </ol>
         </li>
     </ul>
     <p>
-        To learn more about creating the source code archive of an application, click the following article number to view the article in the Lucent Sky Knowledge Base:
+        若你想獲取更多建立應用程式程式碼壓縮檔的相關資訊，請參考 Lucent Sky 知識庫：
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<a href="342055">How to create a source code archive of an application for analysis and mitigation</a>
     </p>
     <p>
-        <strong>To scan an application for vulnerabilities</strong>
+        <strong>掃描應用程式弱點</strong>
     </p>
     <ol>
         <li>
-            Go to the Web UI in your browser, and then sign in with your credentials.
+            以瀏覽器開啟 AVM Web UI 並以你的帳號登入。
         </li>
         <li>
-            Under the Action Bar on the left, click <strong>New Application</strong>. Enter a descriptive name of the application to be scanned in <strong>Application Name</strong>, select the application framework, and then click <strong>Create</strong>. You can also optionally change the default analysis and mitigation parameters for this application by clicking <strong>More Options</strong>. You can change these parameters at a later stage as well.
+            點選左側 <strong>[新應用程式]</strong> 後，請輸入應用程式名稱並選擇框架類型後，點選<strong>建立</strong>按鈕。或者視你的需要，也可以先點選 <strong>[更多選項]</strong> ，針對系統分析及修正的預設值進行設定，或者你也可以選擇稍後再進行這些設定。
         </li>
         <li>
-            Select <strong>Static Code Analysis</strong> for <strong>Analysis Method</strong>. Select <strong>Standard Analysis</strong> for <strong>Analysis Mode</strong> for a standard analysis or <strong>Comprehensive Analysis</strong> for a deep-level, thorough analysis. Click <strong>Browse…</strong> and select the zip file containing the source code of the application. You can also optionally change the default analysis and mitigation parameters for this application by clicking <strong>More Options</strong>. Finally, click <strong>Upload</strong>.
+            接著在 <strong>[分析方式]</strong> 請選擇 <strong>[靜態程式碼分析]</strong>，至於 <strong>[分析模式]</strong> 部分，你可以選擇 <strong>[標準分析]</strong> 進行一個標準模式的分析、也可以選擇 [完整分析] 進行一個較完整且深入的分析。接著請在 [程式碼壓縮檔] 部分選擇上傳你程式程式碼的 zip 檔案。在此處你也可以點選 <strong>[更多選項]</strong> ，針對系統分析及修正的設定值進行修改。完成相關設定後請點選 <strong>[上傳]</strong> 按鈕。
         </li>
         <li>
-            The web page will refresh itself. An Application Box will be shown with the progress of the scan. There are 6 stages:
+            網頁將會自動刷新，此時會出現應用程式方框顯示掃描的進度及情況，掃描共分為六個階段：
             <ul>
                 <li>
-                    Building
+                    建構中
                 </li>
                 <li>
-                    Compiling
+                    編譯中
                 </li>
                 <li>
-                    Analyzing (S-1)
+                    分析中 (S-1)
                 </li>
                 <li>
-                    Analyzing (S-2)
+                    分析中 (S-2)
                 </li>
                 <li>
-                    Analyzing (S-3)
+                    分析中 (S-3)
                 </li>
                 <li>
-                    Analyzing (S-4)
+                    分析中 (S-4)
                 </li>
             </ul>
         </li>
         <li>
-            Depends on the size and complexity of the application, the scan can take anytime from a few seconds to a few hours to complete. Under most circumstances, a Lucent Sky AVM server is capable of finishing scanning a 100,000 lines application in under 10 minutes.
+            掃描所需的時間大約在幾秒至幾小時都有可能，需視應用程式的大小及複雜度而定。在大多數的情況下，10萬行左右的程式碼會在10分鐘內完成掃描。
         </li>
         <li>
-            Once the scan is completed, the Application Box will show the number of total vulnerabilities, the number of vulnerabilities that
-            have been automatically mitigated, as well as the number of those couldn't be automatically mitigated.
+            當掃描結束時，應用程式方框將會顯示總弱點數、自動修正弱點數及未自動修正的弱點數目。
         </li>
     </ol>
     <p>
-        <strong>To review the identified vulnerabilities and their Instant Fix</strong>
+        <strong>查看 AVM Web UI 偵測到的弱點及立即修正的結果</strong>
     </p>
     <ol>
         <li>
-            Go to the AVM Web UI in your browser, and then sign in with your credentials.
+            以瀏覽器開啟 AVM Web UI 並以你的帳號登入。
         </li>
         <li>
-            Click the Application Box of the application you want to review. You will be taken to the <strong>Scan Summary</strong> page.
+            點選你想檢視的應用程式方框，將會進入 <strong>[掃描概要]</strong> 頁面。
         </li>
         <li>
-            The <strong>Scan Summary</strong> page has three parts: Efficiency Snapshot, Vulnerabilities and Additional Information.
+            <strong>[掃描概要]</strong> 頁面分為三個部分：效益概觀、弱點資訊及附加資訊。
             <ul>
                 <li>
-                    The <strong>Efficiency Snapshot</strong> shows the mitigation cost and programming hours saved by automatically mitigating the vulnerabilities in this application.
+                    <strong>效益概觀</strong> 顯示這個應用程式節省的修正成本及節省的開發時間。
                 </li>
                 <li>
-                    The <strong>Vulnerabilities</strong> pie chart shows the distribution of vulnerability categories, as well as the number of vulnerabilities in each category. Clicking a vulnerability slice or a vulnerability box next to the pie chart will take you to the <strong>Vulnerability List</strong> page.
+                    <strong>弱點資訊</strong> 圓餅圖顯示了弱點種類的分佈情況、並顯示各種類的弱點數量。若點選圓餅圖上該弱點種類、或右側該分類區塊，則會進入該種類的 <strong>[弱點清單]</strong> 頁面。
                 </li>
                 <li>
-                    <strong>Additional Information</strong> shows information about this scan, as well as the number of vulnerabilities compared with the previous scan of the same application.
+                    <strong>附加資訊</strong> 顯示此次掃描的相關資訊並比較這個應用程式前後次掃描的弱點數量變化。
                 </li>
             </ul>
         </li>
         <li>
-            The <strong>Vulnerability List</strong> page is a list of all the vulnerabilities in that category. Clicking a vulnerability will take you to the <strong>Vulnerability Details</strong> page.
+            <strong>[弱點清單]</strong> 頁面會列出該種類所有的弱點，點選單一弱點則可以進入 <strong>[弱點明細]</strong> 頁面。
         </li>
         <li>
-            The title of the <strong>Vulnerability Details</strong> page shows the category, the file and line number of the vulnerability. The <strong>Statements</strong> shows the flow of the vulnerability in the application, and <strong>Instant Fix</strong> shows how the vulnerability can be mitigated by replacing the source code at the file and line indicated with the Instant Fix.
+            <strong>[弱點明細]</strong> 頁面頁面會在標題顯示該弱點的分類、檔案名稱及行數、 <strong>[陳述]</strong> 部分會顯示弱點在程式碼中的流程，至於 <strong>[立即修正]</strong> 部分則顯示建議修正的檔案位置、行號及建議用來取代該行的程式碼。
         </li>
     </ol>
     <p>
-        <strong>To download the secured software of an application of an application</strong>
+        <strong>下載應用程式修正過後的程式碼</strong>
     </p>
     <ol>
         <li>
-            Go to the Web UI in your browser, and then sign in with your credentials.
+            以瀏覽器開啟 AVM Web UI 並以你的帳號登入。
         </li>
         <li>
-            Click the Application Box of the application you want to review. You will be taken to the <strong>Scan Summary</strong> page.
+            點選你想檢視的應用程式方框，將會進入 <strong>[掃描概要]</strong> 頁面。
         </li>
         <li>
-            Under the Action Bar on the left, click <strong>Mitigate</strong>. In the pop-up dialog, choose if you want to include mitigation information and original source code in the generated source code as comments. The generated source code might be similar to
+            點選畫面左側的 <strong>[修正]</strong> 按鈕，將會跳出一個視窗，你可以選擇你是否需要以註解方式加入修正資訊及原始程式碼資訊。若你選擇加入相關資訊，會看到類似這樣的結果：
             <br />
             <span style="font-family: Consolas;">Response.Write(HtmlEncode(Request[“foo”])); // <em>CWE79 (High)</em>; <em>Original source code: Response.Write(Request[“Foo”]);</em></span>
             <br />
-            where <em>CWE79 (High)</em> is the mitigation information and <em>Original source code: Response.Write(Request[“Foo”]);</em> is the original source code.
+            其中 <em>CWE79 (High)</em> 是修正資訊、而 <em>Original source code: Response.Write(Request[“Foo”]);</em> 則是原始程式碼。
         </li>
         <li>
-            Click <strong>Mitigate</strong> and download to download the secured source code.
+            點選 <strong>[修正並下載]</strong> 按鈕，將會下載應用程式修正過後的程式碼。
         </li>
     </ol>
     <p>
-        <strong>To download the security report of an application of an application</strong>
+        <strong>下載應用程式的資訊安全報告</strong>
     </p>
     <ol>
         <li>
-            Go to the AVM Web UI in your browser, and then sign in with your credentials.
+            以瀏覽器開啟 AVM Web UI 並以你的帳號登入。
         </li>
         <li>
-            Click the Application Box of the application you want to review. You will be taken to the <strong>Scan Summary</strong> page.
+            點選你想檢視的應用程式方框，將會進入 <strong>[掃描概要]</strong> 頁面。
         </li>
         <li>
-            Under the Action Bar on the left, click <strong>Report</strong>. In the pop-up dialog, choose the format of the report, then click <strong>Generate</strong> and download.
+            點選畫面左側的 <strong>[報告]</strong> 按鈕，將會跳出一個視窗，選擇要下載的檔案格式後，點選 <strong>[產生並下載]</strong> 按鈕來下載報告。
         </li>
     </ol>
 </section>
@@ -254,7 +253,7 @@ permalink: /zh/kb/575123.html
         屬性
     </h1>
     <p>
-        文章編號：KB575123 – 上次校閱：2015 年 5 月 31 日 – 版次 1.1
+        文章編號：KB575123 – 上次校閱：2015 年 8 月 7 日 – 版次 1.2
     </p>
     <p>
         <strong>適用於</strong>
