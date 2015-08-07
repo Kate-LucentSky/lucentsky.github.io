@@ -19,138 +19,138 @@ permalink: /zh/kb/581435.html
         更多資訊
     </h1>
     <h2 id="prerequisites-for-developers">
-        Prerequisites for Developers
+        開發者需求
     </h2>
     <p>
-        Developers should be familiar with the following tools:
+        開發者應熟悉下列的工具：
     </p>
     <ul>
         <li>
-            <strong>C#, Java or VB.NET languages</strong>
+            <strong>C#, Java 或 VB.NET languages</strong>
             <ul>
                 <li>
-                    This guide uses C# (which has a similar syntax with Java and VB.NET) in its examples and screenshots.
+                    這篇指南的範例及截圖都是使用C#（C# 的語法跟 Java 和 VB.NET 都非常相似）。
                 </li>
             </ul>
         </li>
         <li>
-            <strong>Visual Studio 2012 or Visual Studio 2013</strong>
+            <strong>Visual Studio 2012 或 Visual Studio 2013</strong>
         </li>
     </ul>
     <h2 id="installing-visual-studio-extension">
-        Installing Visual Studio Extension
+        安裝 AVM Visual Studio 擴充元件
     </h2>
     <p>
-        In this section, you will see:
+        本段你將會看到：
     </p>
     <ul>
         <li>
-            A demonstration of how to install and configure Visual Studio Extension
+            示範如何安裝AVM Visual Studio 擴充元件
         </li>
     </ul>
     <p>
-        At the end of this section, you will be able to:
+        本段結束時，你會知道如何：
     </p>
     <ul>
         <li>
-            Prepare Visual Studio to communicate with a Lucent Sky AVM Server
+            建立 Visual Studio 和 AVM 主機間通訊的前置作業
         </li>
         <li>
-            Install AVM Visual Studio Extension on a development machine
+            在開發環境上安裝 AVM Visual Studio 擴充元件
         </li>
     </ul>
     <p>
-        <strong>To prepare Visual Studio to communicate with AVM Server</strong>
+        <strong>建立 Visual Studio 和 AVM 主機間通訊的前置作業</strong>
     </p>
     <ol>
         <li>
-            Close any Visual Studio instance that's running. Open the Visual Studio configuration file (usually located at <strong>C:\Program Files (x86)\Microsoft Visual Studio <em>11.0</em>\Common7\IDE\devenv.exe.config</strong>, where <em>11.0</em> is the version of Visual Studio) with a text editor. Modify the <strong>system.serviceModel</strong> section to enable Visual Studio to communicate with a Lucent Sky AVM server.
+            關閉所有正在執行的 Visual Studio 視窗後，以文字編輯器開啟 Visual Studio 的組態設定檔（檔案通常位於：<strong>C:\Program Files (x86)\Microsoft Visual Studio <em>11.0</em>\Common7\IDE\devenv.exe.config</strong>，其中 <em>11.0</em> 是 Visual Studio 的版本）。修改 <strong>system.serviceModel</strong> 部分以允許 Visual Studio 和 AVM 主機進行通訊
         </li>
     </ol>
     <p>
-        To learn more about how to modify the configuration file, click the following article number to view the article in the Lucent Sky Knowledge Base:
+        若你希望了解更多關於修改 Visual Studio 的組態設定檔的細節，請參考 Lucent Sky 知識庫：
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<a href="390837">KB390837</a> Administration of Lucent Sky AVM Visual Studio Extension
     </p>
     <p>
-        <strong>To install AVM Visual Studio Extension</strong>
+        <strong>在開發環境上安裝 AVM Visual Studio 擴充元件</strong>
     </p>
     <ol>
         <li>
-            Double-click on the AVM Visual Studio Extension setup file (<strong>CLEAR_VSIX.vsix</strong>).
+            在 AVM Visual Studio 擴充元件安裝檔案 (<strong>CLEAR_VSIX.vsix</strong>) 上點擊滑鼠左鍵兩次。
         </li>
         <li>
-            Follow the installation wizard to complete the setup.
+            依照安裝精靈的指示完成安裝。
         </li>
     </ol>
     <p>
-        To learn more about the installation and configuration of AVM Visual Studio Extension, as well as system requirements, click the following article number to view the article in the Lucent Sky Knowledge Base:
+        若你希望得知更多關於AVM Visual Studio 擴充元件安裝及組態設定等相關資訊，請參考 Lucent Sky 知識庫：
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<a href="390837">KB390837</a> Administration of Lucent Sky AVM Visual Studio Extension
     </p>
     <h2 id="using-visual-studio-extension">
-        Using Visual Studio Extension
+        使用 AVM Visual Studio 擴充元件
     </h2>
     <p>
-        In this section, you will see:
+        本段你將會看到：
     </p>
     <ul>
         <li>
-            A sample procedure for analyzing and mitigating the vulnerabilities in an application with the AVM Visual Studio Extension
+            示範如何使用AVM Visual Studio 擴充元件進行應用程式中的弱點的掃描及修正
         </li>
     </ul>
     <p>
-        At the end of this section, you will be able to:
+        本段結束時，你會知道如何：
     </p>
     <ul>
         <li>
-            Scan an application for vulnerabilities and automatically fixing them using Lucent Sky AVM Visual Studio Extension
+            如何使用 AVM Visual Studio 擴充元件進行應用程式中的弱點的掃描及自動修正
         </li>
         <li>
-            Review the identified vulnerabilities and apply their Instant Fix using Lucent Sky AVM Visual Studio Extension
+            如何檢視 AVM Visual Studio 擴充元件掃描及自動修正後的結果
         </li>
     </ul>
     <p>
-        <strong>To analyze and mitigate the vulnerabilities in an application using Lucent Sky AVM AVM Visual Studio Extension</strong>
+        <strong>使用 AVM Visual Studio 擴充元件進行應用程式中的弱點的掃描及修正</strong>
     </p>
     <ol>
         <li>
-            For web applications, open the solution containing the project of the application in Visual Studio. For web sites, open the web site in Visual Studio.
+            若是網頁應用程式，以 Visual Studio 開啟專案檔；若是網站，以 Visual Studio 開啟網站。
         </li>
         <li>
-            Under <strong>Solution Explorer</strong>, right-click on the project or website to be analyzed, and then select <strong>Analyze Security Issues</strong>.
+            在 <strong>[方案總管]</strong> 中，以右鍵點選想要分析的專案或網站，接著選擇 <strong>[Analyze Security Issues]</strong> 項目。
         </li>
         <li>
-            The <strong>Analyze Security Issues</strong> dialog will pop up. Click <strong>Scan</strong> to start the analysis. You can also optionally change the analysis and mitigation parameters for each vulnerability categories and source vectors.
+            接著會跳出 <strong>[Analyze Security Issues]</strong> 視窗，點選 <strong>[Scan]</strong> 以開始分析。你也可以針對不同弱點類型設定個別的處理方式及偵測來源類型進行相關設定。
         </li>
         <li>
-            The <strong>Analysis Results</strong> window will appear. When the analysis is in progress, the window will refresh itself to show the current stage. You can also click Refresh at its upper-right corner to manually refresh the window. There are 6 stages:
+            此時會出現 <strong>[Analysis Results]</strong> 視窗，當掃描正在進行的時候，這個視窗將會顯示階段狀態並且自動更新。你也可以點選右上角的 <strong>[Refresh]</strong> 按鈕以取得掃描的最新狀態，掃描共有六個階段：
             <ul>
                 <li>
-                    Building
+                    建構中
                 </li>
                 <li>
-                    Compiling
+                    編譯中
                 </li>
                 <li>
-                    Analyzing (S-1)
+                    分析中 (S-1)
                 </li>
                 <li>
-                    Analyzing (S-2)
+                    分析中 (S-2)
                 </li>
                 <li>
-                    Analyzing (S-3)
+                    分析中 (S-3)
                 </li>
                 <li>
-                    Analyzing (S-4)
+                    分析中 (S-4)
                 </li>
             </ul>
         </li>
         <li>
-            Once the analysis is completed, the vulnerabilities will be shown in the <strong>Analysis Results</strong> window. Expanding a vulnerability category will show all vulnerabilities under that category. Expanding a vulnerability will show the <strong>Statements</strong> and <strong>Instant Fix</strong> (if available) of that vulnerability. Double-click one of the <strong>Statements</strong> or <strong>Instant Fixes</strong> to go to the line of code in question.
+            一旦分析完成後，弱點將會顯示在 <strong>[Analysis Results]</strong> 視窗，展開弱點分類將會顯示該分類下的所有弱點。再向下展開單一弱點則會顯示該弱點的所有陳述和立即修正的語法（若無法進行自動修正，就不會顯示立即修正的資訊）。雙鍵點選 <strong>陳述</strong> 或 <strong>立即修正</strong> ，將會自動跳至該弱點的行數。
         </li>
         <li>
-            To mitigate a vulnerability, right-click on its <strong>Instant Fix</strong> and click <strong>Mitigate</strong>. The Instant Fix will be automatically applied in Visual Studio.
+            以右鍵點擊立即修正並選擇 <strong>[Mitigate]</strong> ，該語法將會直接自動被 Visual Studio 套用且接受。
         </li>
     </ol>
 </section>
@@ -160,7 +160,7 @@ permalink: /zh/kb/581435.html
         屬性
     </h1>
     <p>
-        文章編號：581435 – 上次校閱：2015 年 5 月 31 日 – 版次 1.1
+        文章編號：581435 – 上次校閱：2015 年 8 月 7 日 – 版次 1.2
     </p>
     <p>
         <strong>適用於</strong>
