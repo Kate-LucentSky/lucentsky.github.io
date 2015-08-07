@@ -226,7 +226,7 @@ permalink: /en/kb/575123.html
             Under the Action Bar on the left, click <strong>Mitigate</strong>. In the pop-up dialog, choose if you want to include mitigation information and original source code in the generated source code as comments. The generated source code might be similar to
             <div>
                 {% highlight csharp %}
-                    Response.Write(HtmlEncode(Request["foo"])); // CWE79 (High)</>; Original source code: Response.Write(Request["Foo"]);
+                    Response.Write(HtmlEncode(Request["foo"])); // CWE79 (High); Original source code: Response.Write(Request["Foo"]);
                 {% endhighlight %}
             </div>
             where <em><code>CWE79 (High)</code></em> is the mitigation information and <em><code>Original source code: Response.Write(Request["Foo"]);</code></em> is the original source code.

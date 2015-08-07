@@ -225,7 +225,7 @@ permalink: /zh/kb/575123.html
             點選畫面左側的 <strong>[修正]</strong> 按鈕，將會跳出一個視窗，你可以選擇你是否需要以註解方式加入修正資訊及原始程式碼資訊。若你選擇加入相關資訊，會看到類似這樣的結果：
             <div>
                 {% highlight csharp %}
-                    Response.Write(HtmlEncode(Request["foo"])); // CWE79 (High)</>; Original source code: Response.Write(Request["Foo"]);
+                    Response.Write(HtmlEncode(Request["foo"])); // CWE79 (High); Original source code: Response.Write(Request["Foo"]);
                 {% endhighlight %}
             </div>
             其中 <em><code>CWE79 (High)</code></em> 是修正資訊、而 <em><code>Original source code: Response.Write(Request["Foo"]);</code></em> 則是原始程式碼。
