@@ -37,7 +37,7 @@ permalink: /en/kb/306011.html
 			<strong>Windows Server 2012 or Windows Server 2012 R2</strong>
 			<ul>
 				<li>
-					CLEAR Engine runs as a Windows Service and AVM Web UI runs on Internet Information Services (IIS). You might need to change settings of Windows Firewall to allow communications between CLEAR Engine and various AVM interfaces.
+					CLEAR Engine runs as a Windows Service and Web UI runs on Internet Information Services (IIS). You might need to change settings of Windows Firewall to allow communications between CLEAR Engine and various AVM interfaces.
 				</li>
 			</ul>
 		</li>
@@ -191,7 +191,7 @@ permalink: /en/kb/306011.html
 	</p>
 	<ul>
 		<li>
-			A demonstration of how to install CLEAR Engine and AVM Web UI on your server
+			A demonstration of how to install CLEAR Engine and Web UI on your server
 		</li>
 	</ul>
 	<p>
@@ -202,7 +202,7 @@ permalink: /en/kb/306011.html
 			Install CLEAR Engine on your server, and install and set up Microsoft SQL Server for it.
 		</li>
 		<li>
-			Install AVM Web UI on your server, and set up Internet Information Services (IIS) for it.
+			Install Web UI on your server, and set up Internet Information Services (IIS) for it.
 		</li>
 	</ul>
 	<p>
@@ -239,7 +239,7 @@ permalink: /en/kb/306011.html
 					<strong>Install CLEAR Engine</strong> – Accept the default location for storing application repository, or choose a custom location, and then click <strong>Next</strong>. The AVM Server setup program will become unresponsive for roughly 30 to 60 seconds during this process.
 				</li>
 				<li>
-					<strong>Install Web UI</strong> – To install AVM Web UI on the same server, enter the FQDN or IP that users will be accessing AVM Web UI through in <strong>Web UI FQDN</strong> or <strong>IP address</strong>, and then click <strong>Next</strong>. To install AVM Web UI on another server or to skip its installation, click <strong>Skip</strong>.
+					<strong>Install Web UI</strong> – To install Web UI on the same server, enter the FQDN or IP that users will be accessing Web UI through in <strong>Web UI FQDN</strong> or <strong>IP address</strong>, and then click <strong>Next</strong>. To install Web UI on another server or to skip its installation, click <strong>Skip</strong>.
 				</li>
 				<li>
 					<strong>Complete</strong> – The AVM Server setup has completed.
@@ -252,7 +252,7 @@ permalink: /en/kb/306011.html
 	</p>
 	<ol>
 		<li>
-			Open Internet Information Services (IIS) Manager. Under <strong>Connections</strong>, click the server that has AVM Web UI installed. 
+			Open Internet Information Services (IIS) Manager. Under <strong>Connections</strong>, click the server that has Web UI installed. 
 		</li>
 		<li>
 			In <strong>Features View</strong>, double-click <strong>Server Certificates</strong>. For the SSL binding of AVM Web UI, you can choose to use a self-signed certificate, to import an existing certificate, or to create a certificate request.
@@ -269,7 +269,7 @@ permalink: /en/kb/306011.html
 			</ul>
 		</li>
 		<li>
-			Under <strong>Connections</strong>, expand the server that has AVM Web UI installed, expand Sites, right-click on <strong>CLEAR Web</strong>, and then select <strong>Edit Bindings…</strong> 
+			Under <strong>Connections</strong>, expand the server that has Web UI installed, expand Sites, right-click on <strong>CLEAR Web</strong>, and then select <strong>Edit Bindings…</strong> 
 		</li>
 		<li>
 			In the <strong>Site Bindings</strong> dialog, click <strong>Add…</strong> In the <strong>Add Site Binding</strong> dialog, select <strong>https</strong> in the <strong>Type</strong> drop-down list, change the <strong>Port</strong> if necessary, select the certificate created in step 2 in the SSL certificate drop-down list, and then click <strong>OK</strong>.

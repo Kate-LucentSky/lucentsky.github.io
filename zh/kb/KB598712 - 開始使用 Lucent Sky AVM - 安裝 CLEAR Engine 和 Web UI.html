@@ -98,7 +98,7 @@ permalink: /zh/kb/598712.html
                     <strong>Install CLEAR Engine</strong> – 你可以使用預設的應用程式安裝位置、或自行輸入你想要安裝的資料夾位置後，點選 <strong>[Next]</strong>按鈕。要請你特別注意的是，AVM Server 的安裝程式可能會在接下來的30到60秒間沒有回應。
                 </li>
                 <li>
-                    <strong>Install Web UI</strong> – 若要將 AVM Web UI 安裝在同一台伺服器上，請輸入 AVM Web UI 要使用的 FQDN 或 IP 於 <strong>Web UI FQDN</strong> or <strong>IP address</strong> 欄位中、接著點選 <strong>[Next]</strong> 按鈕；若要使用其他伺服器作為 AVM Web UI 主機，請直接點選 <strong>[Skip]</strong> 按鈕。
+                    <strong>Install Web UI</strong> – 若要將 Web UI 安裝在同一台伺服器上，請輸入 Web UI 要使用的 FQDN 或 IP 於 <strong>Web UI FQDN</strong> or <strong>IP address</strong> 欄位中、接著點選 <strong>[Next]</strong> 按鈕；若要使用其他伺服器作為 Web UI 主機，請直接點選 <strong>[Skip]</strong> 按鈕。
                 </li>
                 <li>
                     <strong>Complete</strong> – AVM 伺服器安裝完成。
@@ -111,10 +111,10 @@ permalink: /zh/kb/598712.html
     </p>
     <ol>
         <li>
-            開啟 <strong>[Internet Information Services 管理員]</strong> ，並在 <strong>[連線窗格]</strong> 內選擇安裝了 AVM Web UI 的伺服器。
+            開啟 <strong>[Internet Information Services 管理員]</strong> ，並在 <strong>[連線窗格]</strong> 內選擇安裝了 Web UI 的伺服器。
         </li>
         <li>
-            此時在右側的功能顯示窗格中，以滑鼠左鍵點擊兩次 <strong>[伺服器憑證]</strong> 項目。你可以選擇使用一個自我簽屬憑證、匯入現有憑證或建立憑證要求以供 AVM Web UI 的 SSL 使用。
+            此時在右側的功能顯示窗格中，以滑鼠左鍵點擊兩次 <strong>[伺服器憑證]</strong> 項目。你可以選擇使用一個自我簽屬憑證、匯入現有憑證或建立憑證要求以供 Web UI 的 SSL 使用。
             <ul>
                 <li>
                     <strong>建立自我簽屬憑證</strong> – 滑鼠右鍵點選 <strong>[伺服器憑證]</strong> 窗格中空白處後，點選 <strong>[建立自我簽屬憑證…]</strong> 。在 <strong>[建立自我簽屬憑證]</strong> 視窗中，輸入 <strong>[指定憑證的好記名稱]</strong> ，例如：「AVM Web UI」。
@@ -128,7 +128,7 @@ permalink: /zh/kb/598712.html
             </ul>
         </li>
         <li>
-            請於左側 <strong>[連線]</strong> 窗格之下，展開安裝了 AVM Web UI 的伺服器，接著再展開 <strong>[站台]</strong> 資料夾，並以滑鼠右鍵點選 <strong>CLEAR Web</strong> 站台、選擇 <strong>[編輯繫結…]</strong> 項目。
+            請於左側 <strong>[連線]</strong> 窗格之下，展開安裝了 Web UI 的伺服器，接著再展開 <strong>[站台]</strong> 資料夾，並以滑鼠右鍵點選 <strong>CLEAR Web</strong> 站台、選擇 <strong>[編輯繫結…]</strong> 項目。
         </li>
         <li>
             於 <strong>[站台繫結]</strong> 視窗下，點選 <strong>[新增(A)…]</strong> 按鈕。接著於新增站台繫結視窗中，<strong>[類型]</strong> 項目請在下拉式選單選擇 <strong>https<strong> 、若你需要，也可以改變 <strong>[連接埠]</strong> 的設定值。<strong>[SSL憑證]</strong> 則請選擇你於上個步驟建立或匯入的憑證，完成後請點選 <strong>[確定]</strong> 按鈕。

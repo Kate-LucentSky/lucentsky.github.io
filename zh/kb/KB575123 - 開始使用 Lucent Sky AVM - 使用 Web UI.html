@@ -29,7 +29,7 @@ permalink: /zh/kb/575123.html
             <strong>C#、Java 或 VB.NET</strong>
             <ul>
                 <li>
-                    這篇指南的範例及截圖都是使用C#（C# 的語法跟 Java 和 VB.NET 都非常相似）。
+                    這篇指南的範例及截圖都是使用 C#（C# 的語法跟 Java 和 VB.NET 都非常相似）。
                 </li>
             </ul>
         </li>
@@ -42,7 +42,7 @@ permalink: /zh/kb/575123.html
     </p>
     <ul>
         <li>
-            如何透過 AVM Web UI 來偵測及修正應用程式的步驟
+            如何透過 Web UI 來偵測及修正應用程式的步驟
         </li>
     </ul>
     <p>
@@ -53,16 +53,16 @@ permalink: /zh/kb/575123.html
             建立一個包含了你的應用程式程式碼的壓縮檔案
         </li>
         <li>
-            使用 AVM Web UI 來掃描你的應用程式弱點並自動修正
+            使用 Web UI 來掃描你的應用程式弱點並自動修正
         </li>
         <li>
-            查看 AVM Web UI 掃描的弱點及修正結果
+            查看 Web UI 掃描的弱點及修正結果
         </li>
         <li>
-            透過 AVM Web UI 下載你應用程式修正過後的程式碼
+            透過 Web UI 下載你應用程式修正過後的程式碼
         </li>
         <li>
-            透過 AVM Web UI 下載你應用程式的資安結果報告
+            透過 Web UI 下載你應用程式的資安結果報告
         </li>
     </ul>
     <p>
@@ -142,7 +142,7 @@ permalink: /zh/kb/575123.html
     </p>
     <ol>
         <li>
-            以瀏覽器開啟 AVM Web UI 並以你的帳號登入。
+            以瀏覽器開啟 Web UI 並以你的帳號登入。
         </li>
         <li>
             點選左側 <strong>[新應用程式]</strong> 後，請輸入應用程式名稱並選擇框架類型後，點選<strong>建立</strong>按鈕。或者視你的需要，也可以先點選 <strong>[更多選項]</strong> ，針對系統分析及修正的預設值進行設定，或者你也可以選擇稍後再進行這些設定。
@@ -181,11 +181,11 @@ permalink: /zh/kb/575123.html
         </li>
     </ol>
     <p>
-        <strong>查看 AVM Web UI 偵測到的弱點及立即修正的結果</strong>
+        <strong>查看 Web UI 偵測到的弱點及立即修正的結果</strong>
     </p>
     <ol>
         <li>
-            以瀏覽器開啟 AVM Web UI 並以你的帳號登入。
+            以瀏覽器開啟 Web UI 並以你的帳號登入。
         </li>
         <li>
             點選你想檢視的應用程式方框，將會進入 <strong>[掃描概要]</strong> 頁面。
@@ -216,16 +216,18 @@ permalink: /zh/kb/575123.html
     </p>
     <ol>
         <li>
-            以瀏覽器開啟 AVM Web UI 並以你的帳號登入。
+            以瀏覽器開啟 Web UI 並以你的帳號登入。
         </li>
         <li>
             點選你想檢視的應用程式方框，將會進入 <strong>[掃描概要]</strong> 頁面。
         </li>
         <li>
             點選畫面左側的 <strong>[修正]</strong> 按鈕，將會跳出一個視窗，你可以選擇你是否需要以註解方式加入修正資訊及原始程式碼資訊。若你選擇加入相關資訊，會看到類似這樣的結果：
-            <br />
-            <span style="font-family: Consolas;">Response.Write(HtmlEncode(Request[“foo”])); // <em>CWE79 (High)</em>; <em>Original source code: Response.Write(Request[“Foo”]);</em></span>
-            <br />
+            <div>
+                {% highlight csharp %}
+                    Response.Write(HtmlEncode(Request[“foo”])); // CWE79 (High)</>; Original source code: Response.Write(Request[“Foo”]);
+                {% endhighlight %}
+            </div>
             其中 <em>CWE79 (High)</em> 是修正資訊、而 <em>Original source code: Response.Write(Request[“Foo”]);</em> 則是原始程式碼。
         </li>
         <li>
@@ -237,7 +239,7 @@ permalink: /zh/kb/575123.html
     </p>
     <ol>
         <li>
-            以瀏覽器開啟 AVM Web UI 並以你的帳號登入。
+            以瀏覽器開啟 Web UI 並以你的帳號登入。
         </li>
         <li>
             點選你想檢視的應用程式方框，將會進入 <strong>[掃描概要]</strong> 頁面。
