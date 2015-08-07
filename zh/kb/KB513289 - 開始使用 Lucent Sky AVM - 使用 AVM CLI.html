@@ -16,88 +16,88 @@ permalink: /zh/kb/513289.html
 
 <section class="bs-docs-section">
     <h1 id="more-information">
-        More Information
+        更多資訊
     </h1>
     <h2 id="prerequisites-for-developers">
-        Prerequisites for Developers
+        開發需求
     </h2>
     <p>
-        Developers should be familiar with the following tools:
+        開發者應熟悉下列的工具：
     </p>
     <ul>
         <li>
-            <strong>C#, Java or VB.NET languages</strong>
+            <strong>C#、Java 或 VB.NET</strong>
             <ul>
                 <li>
-                    This guide uses C# (which has a similar syntax with Java and VB.NET) in its examples and screenshots.
+                    這篇指南的範例及截圖都是使用C#（C# 的語法跟 Java 和 VB.NET 都非常相似）。
                 </li>
             </ul>
         </li>
         <li>
-            <strong>Bash, Command Prompt or Windows PowerShell</strong>
+            <strong>Bash, Command Prompt 或 Windows PowerShell</strong>
         </li>
     </ul>
     <h2 id="using-cli">
-        Using CLI
+        使用 CLI
     </h2>
     <p>
-        In this section, you will see:
+        本段你將會看到：
     </p>
     <ul>
         <li>
-            A demonstration of how to install and configure Lucent Sky AVM CLI
+            示範如何安裝及配置 AVM CLI
         </li>
         <li>
-            A sample procedure for analyzing and mitigating an application with the Lucent Sky AVM CLI
+            示範如何利用 AVM CLI 來偵測及修正應用程式
         </li>
     </ul>
     <p>
-        At the end of this section, you will be able to:
+        本段結束時，你會知道如何：
     </p>
     <ul>
         <li>
-            Install and configure CLI on a development machine
+            在開發環境安裝及配置 AVM CLI
         </li>
         <li>
-            Use CLI to scan an application for vulnerabilities and automatically fixing them
+            透過 AVM CLI 來掃描應用程式以偵測弱點並立即修正
         </li>
         <li>
-            Download the secured source code of an application from the Lucent Sky AVM CLI
+            透過 AVM Web CLI 來下載你應用程式修正過後的程式碼
         </li>
         <li>
-            Download the security report of an application from the Lucent Sky AVM CLI
+            透過 AVM Web CLI 來下載你應用程式的資訊安全報告
         </li>
     </ul>
     <p>
-        <strong>To install and configure AVM CLI</strong>
+        <strong>安裝及配置AVM CLI</strong>
     </p>
     <ol>
         <li>
-            Double click on the Lucent Sky AVM CLI setup file (<strong>CLEAR_CLI.exe</strong>). The file will automatically extract and create a <strong>CLEAR_CLI</strong> folder at <strong>C:\Program Files\Lucent Sky\CLEAR CLI</strong> (or the location you chose during the extraction process).
+            在 AVM CLI 安裝檔案（<strong>CLEAR_CLI.exe</strong>）上點擊滑鼠左鍵兩次，檔案將會自動解壓縮到目錄 <strong>C:\Program Files\Lucent Sky\CLEAR CLI</strong> 並新增一個 <strong>CLEAR_CLI</strong> 資料夾（你也可以自行指定目標資料夾）。
         </li>
         <li>
-            Navigate to <strong>C:\Program Files\Lucent Sky\CLEAR CLI</strong> (or the location you chose during the extraction process). Open <strong>SkyAnalyzer.Interface.Console.exe</strong> with a text editor.
+            開啟 <strong>C:\Program Files\Lucent Sky\CLEAR CLI</strong> 或你在上一步自行指定的資料夾位置，並以文字編輯器開啟 <strong>SkyAnalyzer.Interface.Console.exe</strong> 檔案。
         </li>
         <li>
-            Replace all occurrences of <strong>clear.contoso.com</strong> with the FQDN, IP address or computer name of an AVM Server, and then save and close the file.
+            以你 AVM 主機的FQDN、IP位置或電腦名稱取代 <strong>clear.contoso.com</strong> 這段文字，並將檔案儲存後關閉文字編輯器。
         </li>
     </ol>
     <p>
-        The default configuration makes AVM CLI communicate with an AVM Server using insecure channels. To learn more about how to secure the communication between AVM Server and AVM CLI, click the following article number to view the article in the Lucent Sky Knowledge Base:
+        AVM CLI 和 AVM主機預設使用不安全的連線，若你希望能改為採用安全的連線，請參考文件：
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<a href="448674">KB448674</a> Administration of Lucent Sky AVM CLI</a>
     </p>
     <p>
-        <strong>To analyze and mitigate the vulnerabilities in an application using Lucent Sky AVM CLI</strong>
+        <strong>透過 AVM CLI 來掃描應用程式以偵測弱點並立即修正</strong>
     </p>
     <p>
-        Lucent Sky AVM CLI has three sets of functions: tools, application and scan. They're the content of Lucent Sky AVM CLI's argument interface. Below is the detail about these sets of functions.
+        AVM CLI共分為三大類功能：「tools」、「application」及「scan」，這將是呼叫CLI時選項「interface」的參數內容，接下來將逐項說明。
     </p>
     <ul>
         <li>
             <strong>Tools</strong>
             <br />
-            Enter the following in Command Prompt:
+            在命令提示字元中輸入下列文字：
             <br />
             <table>
                 <tbody>
@@ -110,15 +110,15 @@ permalink: /zh/kb/513289.html
             </table>
             <ul>
                 <li>
-                    Methods:
+                    方法：
                     <table>
                         <thead style="background-color: #c8c8c8;">
                             <tr>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Method
+                                    方法
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Description
+                                    說明
                                 </td>
                             </tr>
                         </thead>
@@ -128,22 +128,22 @@ permalink: /zh/kb/513289.html
                                     base64encode
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Obtain the base64 encoded value of the user credentials. Use with argument <strong>value</strong>.
+                                    取得 base64 編碼後的憑證。配合 <strong>value</strong> 引數使用。
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </li>
                 <li>
-                    Arguments:
+                    引數：
                     <table>
                         <thead style="background-color: #c8c8c8;">
                             <tr>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Option
+                                    選項
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Description
+                                    說明
                                 </td>
                             </tr>
                         </thead>
@@ -153,18 +153,18 @@ permalink: /zh/kb/513289.html
                                     --value
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method <strong>base64encode</strong>.
+                                    <strong>base64encode</strong> 方法所需要的引數。
                                     <br />
-                                    The format is "Email Password AccountType". Use <strong>Sql</strong> as AccountType for built-in accounts; <strong>ActiveDirectory</strong> for organizational accounts.
+                                    格式為：「登入AVM的電子郵件 密碼 帳號類型」。若是 AVM 內建的帳號，在帳號類型輸入 <strong>Sql</strong> 」；若是組織帳號，請輸入 <strong>ActiveDirectory</strong> 。
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </li>
                 <li>
-                    Example:
+                    範例：
                     <br />
-                    The command below will generate the base64 encoded string of the built-in account <em>alice@contoso.com</em> with the password <em>password</em>:
+                    下列命令會生成內建帳號 <em>alice@contoso.com</em> 、密碼為 <em>password</em> 的base64編碼憑證：
                     <table>
                         <tbody>
                             <tr>
@@ -180,7 +180,7 @@ permalink: /zh/kb/513289.html
         <li>
             <strong>Application</strong>
             <br />
-            Enter the following in Command Prompt:
+            在命令提示字元中輸入下列文字：
             <br />
             <table>
                 <tbody>
@@ -193,15 +193,15 @@ permalink: /zh/kb/513289.html
             </table>
             <ul>
                 <li>
-                    Methods:
+                    方法：
                     <table>
                         <thead style="background-color: #c8c8c8;">
                             <tr>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Method
+                                    方法
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Description
+                                    說明
                                 </td>
                             </tr>
                         </thead>
@@ -211,7 +211,7 @@ permalink: /zh/kb/513289.html
                                     create
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Create a new application.
+                                    建立一個新的應用程式。
                                 </td>
                             </tr>
                             <tr>
@@ -219,22 +219,22 @@ permalink: /zh/kb/513289.html
                                     delete
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Delete an existing application.
+                                    刪除一個已存在的應用程式。
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </li>
                 <li>
-                    Arguments:
+                    引數：
                     <table>
                         <thead style="background-color: #c8c8c8;">
                             <tr>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Option
+                                    選項
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Description
+                                    說明
                                 </td>
                             </tr>
                         </thead>
@@ -244,7 +244,7 @@ permalink: /zh/kb/513289.html
                                     --credential
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Base64 encoded credentials. You can learn more about generating base64 encoded credentials in the Tools section.
+                                    以Base64編碼的憑證資訊。你可以在「Tools」段落找到生成憑證的相關資訊。
                                 </td>
                             </tr>
                             <tr>
@@ -252,7 +252,7 @@ permalink: /zh/kb/513289.html
                                     --applicationid
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    The GUID of the application on AVM. AVM will use this GUID to identify the application.
+                                    AVM 中應用程式的 GUID。AVM 將會使用這個 GUID 來辨識應用程式。
                                 </td>
                             </tr>
                             <tr>
@@ -260,9 +260,9 @@ permalink: /zh/kb/513289.html
                                     --applicationname
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method <strong>create</strong>.
+                                    <strong>create</strong> 方法所需要的引數。
                                     <br />
-                                    The name of the application to be created.
+                                    應用程式的名稱。
                                 </td>
                             </tr>
                             <tr>
@@ -270,9 +270,9 @@ permalink: /zh/kb/513289.html
                                     --applicationframework
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method <strong>create</strong>.
+                                    <strong>create</strong> 方法所需要的引數。
                                     <br />
-                                    The framework of the application. Frameworks supported are DotNet, Java and PHP.
+                                    應用程式的框架類型，目前支援 DotNet、Java 及 PHP.
                                 </td>
                             </tr>
                             <tr>
@@ -280,11 +280,11 @@ permalink: /zh/kb/513289.html
                                     --applicationidentificationrules
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Optional argument for method <strong>create</strong>.
+                                    <strong>create</strong> 方法的選擇性引數。
                                     <br />
-                                    The types of vulnerabilities to identify, separated by commas. For example, <strong>CWE79,CWE89,CWE90</strong>. If this argument is not present, identification will be enabled on all types.
+                                    應用程式要偵測的弱點類別，以逗號串聯，例如：<strong>CWE79,CWE89,CWE90</strong>。若此引數不存在則會偵測現存所有的弱點類別。
                                     <br />
-                                    This argument must be used with the argument applicationmitigaterules. Also, rules in argument applicationmitigaterules must also exist in this argument.
+                                    這個引數必需和 <strong>applicationmitigaterules</strong> 引數一起使用。同時，<strong>applicationmitigaterules</strong> 引數中的弱點類別一定要存在於這個引數中。
                                 </td>
                             </tr>
                             <tr>
@@ -292,11 +292,11 @@ permalink: /zh/kb/513289.html
                                     --applicationmitigaterules
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Optional argument for method <strong>create</strong>.
+                                    <strong>create</strong> 方法的選擇性引數。
                                     <br />
-                                    The types of vulnerabilities to mitigate, separated by commas. For example, <strong>CWE89,CWE90</strong>. If this argument is not present, mitigation will be enabled on all types.
+                                    應用程式要修正的弱點類別，以逗號串聯，例如：<strong>CWE89,CWE90</strong>。若此引數不存在則會修正現存所有的弱點類別。
                                     <br />
-                                    This argument must be used with the argument applicationidentificationrules. Also, rules in this argument must also exist in argument applicationidentificationrules.
+                                    這個引數必需和 <strong>applicationidentificationrules</strong> 引數一起使用。同時，這個引數中的弱點類別一定要存在於 <strong>applicationidentificationrules</strong> 引數中。
                                 </td>
                             </tr>
                             <tr>
@@ -304,18 +304,18 @@ permalink: /zh/kb/513289.html
                                     --applicationvectors
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Optional argument for method <strong>create</strong>.
+                                    <strong>create</strong> 方法的選擇性引數。
                                     <br />
-                                    The types of vectors considered potentially dangerous, separated by commas. For example, Database,WebRequest. If this argument is not present, all vectors will be considered potentially dangerous.
+                                    不信任的資料來源，以逗號串聯，例如：<strong>Database,WebRequest</strong>。若此引數不存在則會偵測現存所有的資料來源。
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </li>
                 <li>
-                    Example:
+                    範例：
                     <br />
-                    The command below will create a <em>DotNet</em> (.NET) application named <em>ContosoWeb</em>, with the application ID <em>AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA</em>. Rules <em>CWE79, CWE89 and CWE90</em> are enabled for identification, with <em>CWE89 and CWE90</em> enabled for mitigation. <em>Database</em> and <em>WebRequest</em> are the only vectors considered potentially dangerous. <em>k2FsaWNlQGNvbnRvc28uY29t</em> is the base64 encoded string of the built-in account <em>alice@contoso.com</em> with the password <em>password</em>:
+                    下列命令會新增一個<em>DotNet</em>（.NET）應用程式、名稱為 <em>ContosoWeb</em>、應用程式的代號為 <em>AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA</em>、偵測 <em>CWE79, CWE89 及 CWE90</em> 規則、修正 <em>CWE89 and CWE90</em> 規則，並只將 <em>Database</em> 及 <em>WebRequest</em> 視為不被信任的資料來源。其中 <em>k2FsaWNlQGNvbnRvc28uY29t</em> 為內建帳號 <em>alice@contoso.com</em>、密碼為 <em>password</em> 的 base64 編碼憑證。
                     <table>
                         <tbody>
                             <tr>
@@ -326,7 +326,7 @@ permalink: /zh/kb/513289.html
                         </tbody>
                     </table>
                     <br />
-                    The command below will delete the application with the application ID <em>AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA</em>.
+                    下列命令會刪除代號 <em>AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA</em> 的應用程式。
                     <table>
                         <tbody>
                             <tr>
@@ -342,7 +342,7 @@ permalink: /zh/kb/513289.html
         <li>
             <strong>Scan</strong>
             <br />
-            Enter the following in Command Prompt:
+            在命令提示字元中輸入下列文字：
             <br />
             <table>
                 <tbody>
@@ -355,15 +355,15 @@ permalink: /zh/kb/513289.html
             </table>
             <ul>
                 <li>
-                    Methods:
+                    方法：
                     <table>
                         <thead style="background-color: #c8c8c8;">
                             <tr>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Method
+                                    方法
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Description
+                                    說明
                                 </td>
                             </tr>
                         </thead>
@@ -373,7 +373,7 @@ permalink: /zh/kb/513289.html
                                     create
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Create a new scan.
+                                    新增一個新的掃描。
                                 </td>
                             </tr>
                             <tr>
@@ -381,7 +381,7 @@ permalink: /zh/kb/513289.html
                                     analyze
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Upload the source code archive and start the analysis.
+                                    上傳程式碼檔案並開始進行分析。
                                 </td>
                             </tr>
                             <tr>
@@ -389,7 +389,7 @@ permalink: /zh/kb/513289.html
                                     status
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Check if the scan has completed. <strong>True</strong> if the scan has completed (even if the scan has failed), <strong>False</strong> if the scan is ongoing.
+                                    查詢掃描是否已完成。若已完成將會回傳 <strong>True</strong> （即使掃描失敗了）、若否則會回傳 <strong>False</strong> 。
                                 </td>
                             </tr>
                             <tr>
@@ -397,7 +397,7 @@ permalink: /zh/kb/513289.html
                                     mitigate
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Download the secured source code of a completed scan.
+                                    下載已完成掃描及弱點修正的程式碼。
                                 </td>
                             </tr>
                             <tr>
@@ -405,7 +405,7 @@ permalink: /zh/kb/513289.html
                                     report
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Download the security report of a completed scan.
+                                    下載已完成掃描的資訊安全報告。
                                 </td>
                             </tr>
                             <tr>
@@ -413,22 +413,22 @@ permalink: /zh/kb/513289.html
                                     delete
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Delete an existing scan.
+                                    刪除一個已存在的掃描。
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </li>
                 <li>
-                    Arguments:
+                    引數:
                     <table>
                         <thead style="background-color: #c8c8c8;">
                             <tr>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Option
+                                    選項
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Description
+                                    說明
                                 </td>
                             </tr>
                         </thead>
@@ -438,7 +438,7 @@ permalink: /zh/kb/513289.html
                                     --credential
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Base64 encoded credentials. You can learn more about generating base64 encoded credentials in the Tools section.
+                                    以 Base64 編碼的憑證資訊，你可以在「Tools」段落找到生成憑證的相關資訊。
                                 </td>
                             </tr>
                             <tr>
@@ -446,7 +446,7 @@ permalink: /zh/kb/513289.html
                                     --scanid
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    The GUID of the scan on AVM. AVM will use this GUID to identify the scan.
+                                    AVM 中掃描的 GUID，AVM 將會使用這個 GUID 來辨識掃描。
                                 </td>
                             </tr>
                             <tr>
@@ -454,9 +454,9 @@ permalink: /zh/kb/513289.html
                                     --applicationid
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method create.
+                                    <strong>create</strong> 方法所需要的引數。
                                     <br />
-                                    The GUID of the application on AVM. AVM will use this GUID to identify the application.
+                                    AVM 中應用程式的 GUID，AVM 將會使用這個 GUID 來辨識應用程式。
                                 </td>
                             </tr>
                             <tr>
@@ -464,11 +464,11 @@ permalink: /zh/kb/513289.html
                                     --scanidentificationrules
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Optional argument for method <strong>create</strong>.
+                                    <strong>create</strong> 方法的選擇性引數。
                                     <br />
-                                    The types of vulnerabilities to identify, separated by commas. For example, <strong>CWE79,CWE89,CWE90</strong>. If this argument is not present, settings from application will be used.
+                                    掃描要偵測的規則，以逗號串聯，例如：<strong>CWE79,CWE89,CWE90</strong>。若此引數不存在則會繼承應用程式的設定。
                                     <br />
-                                    This argument must be used with the argument <strong>scanmitigaterules</strong>. Also, rules in argument <strong>scanmitigaterules</strong> must also exist in this argument.
+                                    這個引數必需和 <strong>scanmitigaterules</strong>引數一起使用。同時，<strong>scanmitigaterules</strong> 引數中的弱點類別一定要存在於這個引數中。
                                 </td>
                             </tr>
                             <tr>
@@ -476,11 +476,11 @@ permalink: /zh/kb/513289.html
                                     --scanmitigaterules
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Optional argument for method <strong>create</strong>.
+                                    <strong>create</strong> 方法的選擇性引數。
                                     <br />
-                                    The types of vulnerabilities to mitigate, separated by commas. For example, <strong>CWE89,CWE90</strong>. If this argument is not present, settings from application will be used.
+                                    掃描要修正的規則，以逗號串聯，例如：<strong>CWE89,CWE90</strong>。若此引數不存在則會繼承應用程式的設定。
                                     <br />
-                                    This argument must be used with the argument <strong>scanidentificationrules</strong>. Also, rules in this argument must also exist in argument <strong>scanidentificationrules</strong>.
+                                    這個引數必需和 <strong>scanidentificationrules</strong>引數一起使用。同時，這個引數中的弱點類別一定要存在於 <strong>scanidentificationrules</strong> 引數中。
                                 </td>
                             </tr>
                             <tr>
@@ -488,9 +488,9 @@ permalink: /zh/kb/513289.html
                                     --scanvectors
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Optional argument for method <strong>create</strong>.
+                                    <strong>create</strong> 方法的選擇性引數。
                                     <br />
-                                    The types of vectors considered potentially dangerous, separated by commas. For example, <strong>Database,WebRequest</strong>. If this argument is not present, settings from application will be used.
+                                    掃描不信任的資料來源，以逗號串聯，例如：<strong>Database,WebRequest</strong>。若此引數不存在則會繼承應用程式的設定。
                                 </td>
                             </tr>
                             <tr>
@@ -498,9 +498,9 @@ permalink: /zh/kb/513289.html
                                     --sourcecodearchive
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method <strong>analyze</strong>.
+                                    <strong>analyze</strong> 方法所需要的引數。
                                     <br />
-                                    The path of the source code archive. For example, <strong>C:\Source.zip</strong>.
+                                    程式碼壓縮檔的路徑，例如：<strong>C:\Source.zip</strong>。
                                 </td>
                             </tr>
                             <tr>
@@ -508,9 +508,9 @@ permalink: /zh/kb/513289.html
                                     --securedsourcecodearchive
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method <strong>mitigate</strong>.
+                                    <strong>mitigate</strong> 方法所需要的引數。
                                     <br />
-                                    The download path of the secured source code archive.
+                                    下載修正後程式碼壓縮檔的路徑。
                                 </td>
                             </tr>
                             <tr>
@@ -518,16 +518,16 @@ permalink: /zh/kb/513289.html
                                     --scanmitigationoption
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method mitigate.
+                                    <strong>mitigate</strong> 方法的選擇性引數。
                                     Supported values are:
                                     <br />
-                                    <strong>1</strong>: including mitigation information
+                                    <strong>1</strong>: 包含修正資訊
                                     <br />
-                                    <strong>2</strong>: including original source code
+                                    <strong>2</strong>: 包含原始程式碼
                                     <br />
-                                    <strong>3</strong>: including mitigation information and original source code
+                                    <strong>3</strong>: 包含修正資訊及原始程式碼
                                     <br />
-                                    If this argument is not present, no mitigation information and original source code are included.
+                                    若此引數不存在，則不包含修正資訊及原始程式碼。
                                 </td>
                             </tr>
                             <tr>
@@ -535,9 +535,9 @@ permalink: /zh/kb/513289.html
                                     --report
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method <strong>report</strong>.
+                                    <strong>report</strong> 方法所需要的引數。
                                     <br />
-                                    The download path of the security report.
+                                    下載資訊安全報告的路徑。
                                 </td>
                             </tr>
                             <tr>
@@ -545,18 +545,18 @@ permalink: /zh/kb/513289.html
                                     --reportformat
                                 </td>
                                 <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                                    Required argument for method <strong>report</strong>.
+                                    <strong>report</strong> 方法所需要的引數。
                                     <br />
-                                    The format of the report. Supported values are <strong>html</strong> and <strong>xml</strong>.
+                                    資訊安全報告的格式，目前支援 <strong>html</strong> 及 <strong>xml</strong>。
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </li>
                 <li>
-                    Example:
+                    範例:
                     <br />
-                    The command below will create a scan with scan ID <em>55555555-5555-5555-5555-555555555555</em> under the application with application ID <em>AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA</em>. Rules <em>CWE79</em> and <em>CWE89</em> are enabled for identification, with <em>CWE89</em> enabled for mitigation. <em>Database</em> is the only vector considered potentially dangerous. <em>k2FsaWNlQGNvbnRvc28uY29t</em> is the base64 encoded string of the built-in account <em>alice@contoso.com</em> with the password <em>password</em>:
+                    下列命令會在應用程式 <em>AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA</em> 新增一個代號為 <em>55555555-5555-5555-5555-555555555555</em> 的掃描，偵測 <em>CWE79</em> 及 <em>CWE89</em> 規則、修正 <em>CWE89</em> 規則，並只將 <em>Database</em> 視為不被信任的資料來源。其中 <em>k2FsaWNlQGNvbnRvc28uY29t</em> 為內建帳號 <em>alice@contoso.com</em>、密碼為 <em>password</em> 的憑證。
                     <table>
                         <tbody>
                             <tr>
@@ -567,7 +567,7 @@ permalink: /zh/kb/513289.html
                         </tbody>
                     </table>
                     <br />
-                    The command below will upload the source code archive at <em>C:\Source.zip</em> to the scan with scan ID <em>55555555-5555-5555-5555-555555555555</em> and start the analysis.
+                    下列命令會將位於 <em>C:\Source.zip</em> 的程式碼壓縮檔上傳到掃瞄 <em>55555555-5555-5555-5555-555555555555</em> 並開始進行分析。
                     <table>
                         <tbody>
                             <tr>
@@ -578,11 +578,11 @@ permalink: /zh/kb/513289.html
                         </tbody>
                     </table>
                     <p>
-                        To learn more about creating the source code archive of an application, click the following article number to view the article in the Lucent Sky Knowledge Base:
+                        若你想獲取更多建立應用程式程式碼壓縮檔的相關資訊，你可以參考文件：
                         <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<a href="342055">KB342055</a> How to create a source code archive of an application for analysis and mitigation</a>
                     </p>
-                    The command below will check the status of the scan with scan ID <em>55555555-5555-5555-5555-555555555555</em>.
+                    下列命令會確認代號 <em>55555555-5555-5555-5555-555555555555</em> 的掃瞄目前進行的狀態。
                     <table>
                         <tbody>
                             <tr>
@@ -593,7 +593,7 @@ permalink: /zh/kb/513289.html
                         </tbody>
                     </table>
                     <br />
-                    The command below will download the secured source code archive of the scan with scan ID <em>55555555-5555-5555-5555-555555555555</em> to <em>C:\SecuredSource.zip</em>. The secured source code contains mitigation information and original source code.
+                    下列命令會將代號 <em>55555555-5555-5555-5555-555555555555</em> 的掃描的修正後的檔案程式碼下載至 <em>C:\SecuredSource.zip</em> 路徑。其中修正後的程式碼檔案內包含修正資訊及原始程式碼的資訊。
                     <table>
                         <tbody>
                             <tr>
@@ -604,7 +604,7 @@ permalink: /zh/kb/513289.html
                         </tbody>
                     </table>
                     <br />
-                    The command below will download the security report in <em>HTML</em> format of the scan with scan ID <em>55555555-5555-5555-5555-555555555555</em> to C:\Report.zip.
+                    下列命令會將代號 <em>55555555-5555-5555-5555-555555555555</em> 的掃描的 <em>HTML</em> 格式掃瞄報告下載至 <em>C:\Report.zip</em> 路徑。
                     <table>
                         <tbody>
                             <tr>
@@ -615,7 +615,7 @@ permalink: /zh/kb/513289.html
                         </tbody>
                     </table>
                     <br />
-                    The command below will delete the scan with scan ID <em>55555555-5555-5555-5555-555555555555</em>.
+                    下列命令會刪除代號 <em>55555555-5555-5555-5555-555555555555</em> 的掃瞄。
                     <table>
                         <tbody>
                             <tr>
