@@ -1,0 +1,226 @@
+---
+layout: default
+title: 管理者指南 - Lucent Sky AVM Visual Studio Extension
+description: 
+permalink: /zh/kb/390837.html
+---
+
+<section class="bs-docs-section">
+    <h1 id="introduction">
+        介紹
+    </h1>
+    <p>
+        使用 Lucent Sky AVM Visual Studio Extension 後，可以在 Visual Studio 中連結到 Lucent Sky AVM Server。如此一來開發者就可以在熟悉的環境下偵測並修改弱點。
+        Lucent Sky AVM 有數種為了開發者設計的介面，包含：CLI、Visual Studio Extension 及 Eclipse 外掛程式。Lucent Sky AVM Visual Studio Extension 允許開發者在熟悉的環境下偵測並修改弱點。這份指南將說明如何安裝、設定、管理及移除 Lucent Sky AVM Extension。
+    </p>
+</section>
+
+<section class="bs-docs-section">
+    <h1 id="more-information">
+        更多資訊
+    </h1>
+    <h2 id="system-requirements">
+        系統需求
+    </h2>
+    <p>
+        Processor, memory, hard disk space and operating system requirements:
+        <table>
+            <thead style="background-color: #c8c8c8;">
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        元件
+                    </td>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        需求
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        硬碟空間
+                    </td>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        200 MB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        記憶體
+                    </td>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        最小值：1 GB（若在虛擬機器中，則為 1.5 GB）
+                        <br />
+                        建議值：2 GB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        處理器
+                    </td>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        最小值：1.6 GHz 處理器
+                        <br />
+                        建議值：2.0 GHz 處理器
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p>
+        Lucent Sky AVM Server 可以被安裝在下列的作業系統內： 
+    </p>
+    <ul>
+        <li>
+            Windows Server 2012 或 Windows Server 2012 R2 Datacenter 及 Standard
+        </li>
+        <li>
+            Windows Server 2008 R2 Datacenter、Enterprise 及 Standard with SP1
+        </li>
+    </ul>
+    <p>
+        Lucent Sky AVM Visual Studio Extension 支援下列版本的Visual Studio：
+    </p>
+    <ul>
+        <li>
+            Visual Studio 2013 Ultimate、Premium、Professional 及 Community
+        </li>
+        <li>
+            Visual Studio 2012 Ultimate、Premium 及 Professional
+        </li>
+    </ul>
+    <p>
+        Lucent Sky AVM Visual Studio Extension 不支援 Visual Studio Express，若你使用 Visual Studio Express ，我們建議你使用 Lucent Sky AVM CLI。
+    </p>
+    <h2 id="installing-lucent-sky-avm-visual-studio-extension">
+        安裝 Lucent Sky AVM Visual Studio Extension
+    </h2>
+    <p>
+        本段你將會看到：
+    </p>
+    <ul>
+        <li>
+            Visual Studio 連接至 AVM Server 的準備工作及在開發者電腦上安裝 Lucent Sky AVM Visual Studio Extension 的範例。
+        </li>
+    </ul>
+    <p>
+        本段結束時，你會知道該如何：
+    </p>
+    <ul>
+        <li>
+            Visual Studio 連接至 AVM Server 的準備工作。
+        </li>
+        <li>
+            在開發者電腦上安裝 Lucent Sky AVM Visual Studio Extension。
+        </li>
+    </ul>
+    <p>
+        <strong>Visual Studio 連接至 AVM Server 的準備工作</strong>
+    </p>
+    <ol>
+        <li>
+        1.	關閉所有正在執行的 Visual Studio 視窗後，使用文字編輯器開啟Visual Studio 的組態檔（configuration file）（通常組態檔位於 <strong>C:\Program Files (x86)\Microsoft Visual Studio <em>11.0</em>\Common7\IDE\devenv.exe.config</strong>，其中 <em>11.0</em> 是 Visual Studio 的版本）。在 </configuration> 上方的最尾端插入下列的組態內容，異動的內容為粗體字，其中 <em>clear.contoso.com</em> 是 Lucent Sky AVM 伺服器的完整網域名稱（fully qualified domain name，FQDN）。
+            <table>
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        <div style="font-family: Consolas;">
+                            &lt;?xml version="1.0" ?&gt;<br />
+                            &lt;configuration&gt;<br />
+                            ......<br />
+                            ......<br />
+                            <br />
+                            &lt;!-- INSERT THE BOLD TEXT JUST ABOVE THE END TAG OF CONFIGURATION --&gt;<br />
+                            <br />
+                            &lt;system.servicemodel&gt;<br />
+                            &nbsp;&nbsp;&lt;bindings&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;nettcpbinding&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;binding name="NetTcpBinding_IGroup" /&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;binding name="NetTcpBinding_IProject" /&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;binding name="NetTcpBinding_IResult" /&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;binding name="NetTcpBinding_IScan" /&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;binding name="NetTcpBinding_ITransformation" /&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;binding name="NetTcpBinding_ITransport"&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;readerquotas maxarraylength="1073741824" maxstringcontentlength="1073741824" /&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/binding&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;binding name="NetTcpBinding_IUser" /&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/nettcpbinding&gt;<br />
+                            &nbsp;&nbsp;&lt;/bindings&gt;<br />
+                            &nbsp;&nbsp;&lt;client&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;endpoint address="net.tcp://<em>clear.contoso.com</em>:5759/SkyAnalyzer/Group" binding="netTcpBinding" bindingconfiguration="NetTcpBinding_IGroup" contract="Clear.Engine.Group.IGroup" name="NetTcpBinding_IGroup"&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/endpoint&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;endpoint address="net.tcp://<em>clear.contoso.com</em>:5759/SkyAnalyzer/Project" binding="netTcpBinding" bindingconfiguration="NetTcpBinding_IProject" contract="Clear.Engine.Project.IProject" name="NetTcpBinding_IProject"&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/endpoint&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;endpoint address="net.tcp://<em>clear.contoso.com</em>:5759/SkyAnalyzer/Result" binding="netTcpBinding" bindingconfiguration="NetTcpBinding_IResult" contract="Clear.Engine.Result.IResult" name="NetTcpBinding_IResult"&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/endpoint&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;endpoint address="net.tcp://<em>clear.contoso.com</em>:5759/SkyAnalyzer/Scan" binding="netTcpBinding" bindingconfiguration="NetTcpBinding_IScan" contract="Clear.Engine.Scan.IScan" name="NetTcpBinding_IScan"&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/endpoint&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;endpoint address="net.tcp://<em>clear.contoso.com</em>:5759/SkyAnalyzer/Transformation" binding="netTcpBinding" bindingconfiguration="NetTcpBinding_ITransformation" contract="Clear.Engine.Transformation.ITransformation" name="NetTcpBinding_ITransformation"&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/endpoint&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;endpoint address="net.tcp://<em>clear.contoso.com</em>:5759/SkyAnalyzer/Transport" binding="netTcpBinding" bindingconfiguration="NetTcpBinding_ITransport" contract="Clear.Engine.Transport.ITransport" name="NetTcpBinding_ITransport"&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/endpoint&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;endpoint address="net.tcp://<em>clear.contoso.com</em>:5759/SkyAnalyzer/User" binding="netTcpBinding" bindingconfiguration="NetTcpBinding_IUser" contract="Clear.Engine.User.IUser" name="NetTcpBinding_IUser"&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/endpoint&gt;<br />
+                            &nbsp;&nbsp;&lt;/client&gt;<br />
+                            &lt;/system.servicemodel&gt;<br />
+                            &lt;/configuration&gt;<br />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                若直接使用上方的組態檔內容，AVM 伺服器和 Visual Studio 的通訊並不安全，請與系統管理者確認如何啟用在 WCF TCP 終端上啟用 transport 和／或 message 安全性。
+            </p>
+        </li>
+    </ol>
+    <p>
+        <strong>安裝 Lucent Sky AVM Visual Studio Extension</strong>
+    </p>
+    <ol>
+        <li>
+          	滑鼠左鍵雙擊點 AVM Visual Studio Extension 的安裝檔（<strong>CLEAR_VSIX.vsix</strong>）。
+        </li>
+        <li>
+            根據安裝精靈提示的步驟完成安裝。
+        </li>
+    </ol>
+    <h2 id="uninstalling-avm-visual-studio-extension">
+        解除安裝 Lucent Sky AVM Visual Studio Extension
+    </h2>
+    <p>
+        <strong>解除安裝 AVM Visual Studio Extension</strong>
+    </p>
+    <ol>
+        <li>
+            在 Visual Studio 中，點選 <strong>[工具]</strong> 目錄內的 <strong>[擴充元件及更新]</strong>、並在清單中選取 <strong>CLEAR Visual Studio Package<strong> 後，選擇 </strong>[移除]<strong>。
+        </li>
+    </ol>
+</section>
+
+<section class="bs-docs-section">
+    <h1 id="properties">
+        內容
+    </h1>
+    <p>
+        文章編號：390837 – 上次校閱：2015 年 8 月 11 日 – 版次 1.1
+    </p>
+    <p>
+        <strong>適用於</strong>
+    </p>
+    <ul>
+        <li>
+            Lucent Sky AVM Enterprise 2
+        </li>
+        <li>
+            Lucent Sky AVM Standard 2
+        </li>
+        <li>
+            Lucent Sky AVM Enterprise 1
+        </li>
+        <li>
+            Lucent Sky AVM Standard 1
+        </li>
+    </ul>
+    <p>
+        <strong>關鍵字</strong>: kbguide avm administrative visualstudio vsix KB306011
+    </p>
+</section>
