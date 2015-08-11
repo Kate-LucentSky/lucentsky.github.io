@@ -1,0 +1,172 @@
+---
+layout: default-zh
+title: 如何選擇一個應用程式來評估 Lucent Sky AVM
+description: 
+permalink: /zh/kb/561026.html
+---
+
+<section class="bs-docs-section">
+    <h1 id="introduction">
+        介紹
+    </h1>
+    <p>
+        這篇文章描述一個適合評估 Lucent Sky AVM 的應用程式的特徵。
+    </p>
+</section>
+
+<section class="bs-docs-section">
+    <h1 id="more-information">
+        更多資訊
+    </h1>
+    <p>
+        這篇文章包含了一個清單，可以幫助你找出最適合評估 Lucent Sky AVM 的應用程式。要成功以 Lucent Sky AVM 執行掃描，應用程式除了需要和它相容之外，也必須要能夠建置。這個清單會幫助你選出最適合快速且成功的評估 Lucent Sky AVM 的應用程式。
+    </p>
+    <h2 id="all-applications">
+        所有應用程式
+    </h2>
+    <ul>
+        <li>
+            網頁應用程式通常會有最好的結果，因為它們經常包含最多的弱點總數，且大部分都被 Lucent Sky AVM 所支援。若要了解 Lucent Sky AVM 所能自動修正的弱點清單，請參考 <a href="https://www.lucentsky.com/avm" target="_blank">www.lucentsky.com/avm</a>。
+        </li>
+    </ul>
+    <h2 id="dot-net">
+        .NET
+    </h2>
+    <ul>
+        <li>
+            <strong>相容的屬性</strong>
+            <ul>
+                <li>
+                    大多數的 .NET 應用程式都和 Lucent Sky AVM 相容。
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>可能不相容的屬性</strong>
+            <ul>
+                <li>
+                    .NET 1.0 和 1.1 的應用程式可能需要被轉換才能和 Lucent Sky AVM 相容。
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>註記</strong>
+            <ul>
+                <li>
+                    有些應用程式使用經由 NuGet 安裝或在本機安裝的函式庫（例如大部分的 SDK），而並沒有被放在程式碼儲存庫中。在把程式碼上傳到 Lucent Sky AVM 前，請將這些函式庫複製到對應的 bin 目錄下。
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="java">
+        Java
+    </h2>
+    <ul>
+        <li>
+            <strong>相容的屬性</strong>
+            <ul>
+                <li>
+                    所有 .jsp、.java 和 .tag 檔案都能編譯的應用程式。
+                </li>
+                <li>
+                    <strong>WEB-INF\lib</strong> 目錄下包含所有編譯所需要的 .jar 檔案的應用程式。這包含編譯所需的第三方函式庫（例如 <strong>hibernate.jar</strong>、<strong>servlet-api.jar</strong>）。
+                </li>
+                <li>
+                    符合 Java 1.5 - 1.7 的應用程式。
+                </li>
+                <li>
+                    和 Apache Tomcat 7.0 或更新相容的應用程式。
+                </li>
+                <li>
+                    含有一個 <strong>WEB-INF</strong> 資料夾的應用程式, 並在該資料夾下有一個佈署描述檔（web.xml）。
+                </li>
+                <li>
+                    單一專案（單一模組）的應用程式。
+                </li>
+                <li>
+                    將所有外部類別都包裝在 .jar 檔案中（而不是把 .class 檔案直接放在資料夾中）的應用程式。
+                </li>
+                <li>
+                    所有要掃描的程式碼檔案都放在下列根目錄之一的應用程式：
+                    <ul>
+                        <li>
+                            專案格式的應用程式：位於包含 Java 專案的 .zip 檔案根目錄的 <strong>java</strong> 或 <strong>src</strong> 目錄。
+                        </li>
+                        <li>
+                            WAR 格式的應用程式：<strong>WEB-INF\classes</strong> 目錄（因為這是 Eclipse 預設的匯出位置）。
+                        </li>
+                        <li>
+                            若程式碼位於包含 Java 專案的 .zip 檔案根目錄下的其他目錄，則需要於掃描前以掃描參數指定該目錄為程式碼目錄。
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>可能不相容的屬性</strong>
+            <ul>
+                <li>
+                    使用根目錄以外的程式碼檔案來編譯的應用程式。
+                </li>
+                <li>
+                    在編譯過程中，使用預先編譯步驟來從外部位置移動或複製程式碼檔案的應用程式。
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="php">
+        PHP
+    </h2>
+    <ul>
+        <li>
+            <strong>相容的屬性</strong>
+            <ul>
+                <li>
+                    大多數的 PHP 應用程式都和 Lucent Sky AVM 相容。
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>可能不相容的屬性</strong>
+            <ul>
+                <li>
+                    應用程式使用 PHP 5.3 或是更舊的版本通常會有相容性問題。
+                </li>
+                <li>
+                    使用 Lucent Sky AVM 尚未支援的 MVC 框架（例如 CodeIgnitor 或 Phalcon）的應用程式可能會有部分無法被分析和修正。應用程式的其他部分可以被分析並產生 Instant Fix。
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section class="bs-docs-section">
+    <h1 id="properties">
+        內容
+    </h1>
+    <p>
+        文章編號：561026 – 最後校正: 2015 年 6 月 22 - 版本 1.1
+    </p>
+    <p>
+        <strong>適用於</strong>
+    </p>
+    <ul>
+        <li>
+            Lucent Sky AVM Enterprise 2
+        </li>
+        <li>
+            Lucent Sky AVM Standard 2
+        </li>
+        <li>
+            Lucent Sky AVM Enterprise 1
+        </li>
+        <li>
+            Lucent Sky AVM Standard 1
+        </li>
+        <li>
+            Lucent Sky AVM On-Demand
+        </li>
+    </ul>
+    <p>
+        <strong>關鍵字</strong>: kbhowto avm KB561026
+    </p>
+</section>
