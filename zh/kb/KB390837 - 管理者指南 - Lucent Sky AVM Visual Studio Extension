@@ -9,8 +9,7 @@ permalink: /zh/kb/390837.html
     <h1 id="introduction">
         介紹
     </h1>
-    <p>
-        使用 Lucent Sky AVM Visual Studio Extension 後，可以在 Visual Studio 中連結到 Lucent Sky AVM Server。如此一來開發者就可以在熟悉的環境下偵測並修改弱點。
+    <p> 
         Lucent Sky AVM 有數種為了開發者設計的介面，包含：CLI、Visual Studio Extension 及 Eclipse 外掛程式。Lucent Sky AVM Visual Studio Extension 允許開發者在熟悉的環境下偵測並修改弱點。這份指南將說明如何安裝、設定、管理及移除 Lucent Sky AVM Extension。
     </p>
 </section>
