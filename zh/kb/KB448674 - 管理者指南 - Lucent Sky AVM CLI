@@ -9,7 +9,7 @@ permalink: /zh/kb/448674.html
     <h1 id="introduction">
         介紹
     </h1>
-         Lucent Sky AVM 有數種為了開發者設計的介面，包含：CLI、Visual Studio Extension 及 Eclipse 外掛程式。Lucent Sky AVM CLI 是提供主控台環境（console environment）連接 Lucent Sky AVM Server 的命令列應用程式（command line application）。這允許開發者將現有的軟體開發環境或基於 DevOps 的軟體生命週期管理（DevOps lifecycle）與 Lucent Sky AVM，也就是偵測及修正安全性弱點，進行整合。這份指南將說明如何安裝、設定、管理及移除 Lucent Sky AVM CLI。 
+         Lucent Sky AVM 有數種為了開發者設計的介面，包含：CLI、Visual Studio Extension 及 Eclipse 外掛程式。Lucent Sky AVM CLI 是提供主控台環境（console environment）連接 Lucent Sky AVM Server 的命令列應用程式（command line application）。這允許開發者將現有的軟體開發環境或基於 DevOps 的軟體生命週期管理（DevOps lifecycle）與 Lucent Sky AVM 的安全性弱點偵測及修正功能進行整合。這份指南將說明如何安裝、設定、管理及移除 Lucent Sky AVM CLI。 
     </p> 
 
 </section>
