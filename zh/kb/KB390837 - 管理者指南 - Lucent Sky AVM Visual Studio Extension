@@ -167,7 +167,7 @@ permalink: /zh/kb/390837.html
                 </tr>
             </table>
             <p>
-                若直接使用上方的組態檔內容，AVM 伺服器和 Visual Studio 的通訊並不安全，請與系統管理者確認如何啟用在 WCF TCP 終端上啟用 transport 和／或 message 安全性。
+                若直接使用上方的組態檔內容，Lucent Sky AVM Server 和 Visual Studio 之間的通訊並不安全，請與系統管理者確認如何啟用在 WCF TCP 終端上啟用 transport 和／或 message 安全性。
             </p>
         </li>
     </ol>
