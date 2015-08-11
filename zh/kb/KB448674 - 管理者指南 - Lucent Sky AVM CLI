@@ -1,0 +1,176 @@
+---
+layout: default
+title: 管理者指南 - Lucent Sky AVM CLI
+description: 
+permalink: /zh/kb/448674.html
+---
+
+<section class="bs-docs-section">
+    <h1 id="introduction">
+        介紹
+    </h1>
+         Lucent Sky AVM 有數種為了開發者設計的介面，包含：CLI、Visual Studio Extension 及 Eclipse 外掛程式。Lucent Sky AVM CLI 是提供主控台環境（console environment）連接 Lucent Sky AVM Server 的命令列應用程式（command line application）。這允許開發者將現有的軟體開發環境或基於 DevOps 的軟體生命週期管理（DevOps lifecycle）與 Lucent Sky AVM，也就是偵測及修正安全性弱點，進行整合。這份指南將說明如何安裝、設定、管理及移除 Lucent Sky AVM CLI。 
+    </p> 
+
+</section>
+
+<section class="bs-docs-section">
+    <h1 id="more-information">
+        更多資訊
+    </h1>
+    <h2 id="system-requirements">
+        系統需求
+    </h2>
+    <p>
+        處理器、記憶體、硬碟空間及作業系統的需求： 
+        <table>
+            <thead style="background-color: #c8c8c8;">
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        元件
+                    </td>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        需求
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        硬碟
+                    </td>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        40 MB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        記憶體
+                    </td>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        最小值：1 GB（若在虛擬機器中，則為 1.5 GB）
+                        <br />
+                        建議值：2 GB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        處理器
+                    </td>
+                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
+                        最小值：1.6 GHz 處理器
+                        <br />
+                        建議值：2.0 GHz 處理器
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p>
+        Lucent Sky AVM CLI 可以被安裝在下列的作業系統內：
+    </p>
+    <ul>
+        <li>
+            Windows Server 2008 R2 with SP1 及更新的版本
+        </li>
+        <li>
+            Windows 7 with SP1 及更新的版本
+        </li>
+    </ul>
+    <p>
+        Lucent Sky AVM CLI 也可以透過 Mono 安裝在下列作業系統中：
+    </p>
+    <ul>
+        <li>
+            Mac OS X 10.3 及更新的版本
+        </li>
+        <li>
+            OpenSUSE 13.1 及更新的版本
+        </li>
+        <li>
+            Ubuntu 10.04 及更新的版本
+        </li>
+    </ul>
+    <p>
+        Lucent Sky AVM CLI 也可能可以透過 Mono 在其他的作業系統上執行，但是這些作業系統是不被支援的。
+    </p>
+    <h2 id="installing-lucent-sky-avm-cli">
+        安裝 Lucent Sky AVM CLI
+    </h2>
+    <p>
+        本段你將會看到：
+    </p>
+    <ul>
+        <li>
+            在開發者電腦安裝 Lucent Sky AVM CLI 及 設定以連接到 Lucent Sky AVM Server 的範例。
+        </li>
+    </ul>
+    <p>
+        本段結束時，你會知道該如何：
+    </p>
+    <ul>
+        <li>
+            在開發者電腦安裝 Lucent Sky AVM CLI。
+        </li>
+        <li>
+            設定以連接到 Lucent Sky AVM Server。
+        </li>
+    </ul>
+    <p>
+        <strong>安裝及設定 Lucent Sky AVM CLI</strong>
+    </p>
+    <ol>
+        <li>
+            在 Lucent Sky AVM CLI 安裝檔案（<strong>CLEAR_CLI.exe</strong>）上點擊滑鼠左鍵兩次，將會在 <strong>C:\Program Files\Lucent Sky\CLEAR CLI</strong>（或你在解壓縮時選擇的其他資料夾）下自動解壓縮並生成 <strong>CLEAR_CLI</strong> 資料夾。
+        </li>
+        <li>
+          	移動至資料夾 <strong>C:\Program Files\Lucent Sky\CLEAR</strong>（或你在解壓縮時選擇其他的資料夾），並以文字編輯器開啟 <strong>SkyAnalyzer.Interface.Console.exe</strong> 檔案。
+        </li>
+        <li>
+          	將所有的 <strong>clear.contoso.com</strong> 以 Lucent Sky AVM server 的 FQDN、IP 位置或電腦名稱取代並存檔。
+        </li>
+    </ol>
+    <p>
+        若直接使用預設的組態檔內容，Lucent Sky AVM Server 和 Lucent Sky AVM CLI 之間的通訊並不安全，請與系統管理者確認如何啟用在 WCF TCP 終端上啟用 transport 和／或 message 安全性。 
+    </p>
+    <h2 id="uninstalling-lucent-sky-avm-cli">
+        解除安裝 Lucent Sky AVM CLI
+    </h2>
+    <p>
+        <strong>解除安裝 AVM Visual Studio Extension</strong>
+    </p>
+    <ol>
+        <li>
+            移除 <strong>C:\Program Files\Lucent Sky\CLEAR CLI</strong> 資料夾（或你在解壓縮時選擇的其他資料夾）。
+        </li>
+    </ol>
+</section>
+
+<section class="bs-docs-section">
+    <h1 id="properties">
+        內容
+    </h1>
+    <p>
+        文章編號：448674 – 上次校閱：2015 年 8 月 11 日 – 版次 1.1
+    </p>
+    <p>
+        <strong>適用於</strong>
+    </p>
+    <ul>
+        <li>
+            Lucent Sky AVM Enterprise 2
+        </li>
+        <li>
+            Lucent Sky AVM Standard 2
+        </li>
+        <li>
+            Lucent Sky AVM Enterprise 1
+        </li>
+        <li>
+            Lucent Sky AVM Standard 1
+        </li>
+    </ul>
+    <p>
+        <strong>關鍵字</strong>: kbguide avm administrative cli KB448674
+    </p>
+</section>
