@@ -19,7 +19,7 @@ permalink: /en/kb/561026.html
         More Information
     </h1>
     <p>
-        This article contains a checklist that is to help you isolate the best application(s) for evaluating Lucent Sky AVM. Successful use of Lucent Sky AVM requires the application be compatible with our software in addition to being buildable. This list will help you choose an application that has the highest likelihood of an expedient and successful evaluation. Troubleshooting for applications with compatibility issues is available, but can cause delays in evaluations. It is suggested that these applications be tested separately or at a later time to the initial evaluation, which should focus on the substance of Application Vulnerability Mitigation (AVM).
+        This article contains a checklist that is to help you isolate the best application(s) for evaluating Lucent Sky AVM. Successful use of Lucent Sky AVM requires the application be compatible with it in addition to being buildable. This list will help you choose an application that has the highest likelihood of an expedient and successful evaluation.
     </p>
     <h2 id="all-applications">
         All applications
@@ -69,10 +69,10 @@ permalink: /en/kb/561026.html
                     Applications for which all .jsp, .java, and .tag files compile.
                 </li>
                 <li>
-                    Applications containing all .jar files necessary for compilation in <strong>WEB-INF\lib</strong>. This includes third-party applications that are needed during compilation (such as <strong>hibernate.jar</strong>, <strong>servlet-api.jar</strong>).
+                    Applications containing all .jar files necessary for compilation in <strong>WEB-INF\lib</strong>. This includes third-party libraries that are needed during compilation (such as <strong>hibernate.jar</strong>, <strong>servlet-api.jar</strong>).
                 </li>
                 <li>
-                    Applications that are Java 1.6 compliant.
+                    Applications that are compliant with Java 1.5 - 1.7.
                 </li>
                 <li>
                     Applications that are compatible with Apache Tomcat 7.0 or newer.
@@ -84,19 +84,19 @@ permalink: /en/kb/561026.html
                     Applications that are a single project (i.e. one module).
                 </li>
                 <li>
-                    Applications that package all external classes in JAR files (as opposed to placing external classes in folders).
+                    Applications that package all external classes in .jar files (as opposed to placing .class files directly in folders).
                 </li>
                 <li>
                     Applications for which all source files to be scanned are located in a single root directory that is one of the following:
                     <ul>
                         <li>
-                            For applications in project format, either a <strong>java</strong> or <strong>src</strong> directory immediately under the root directory of the .zip file containing the Java project
+                            For applications in project format, either a <strong>java</strong> or <strong>src</strong> directory immediately under the root directory of the .zip file containing the Java project.
                         </li>
                         <li>
-                            For applications in WAR format, the <strong>WEB-INF\classes</strong> directory (so chosen because it is the default export location for Java source files in Eclipse)
+                            For applications in WAR format, the <strong>WEB-INF\classes</strong> directory (so chosen because it is the default export location for Java source files in Eclipse).
                         </li>
                         <li>
-                            Another directory that is somewhere under the root directory of the .zip file containing the Java project, and is specified by the user and passed in as a scan argument to Lucent Sky AVM.
+                            If the source code is located in another directory that is under the root directory of the .zip file containing the Java project, it needs to be specified by the user and as a scan argument prior to scanning.
                         </li>
                     </ul>
                 </li>
@@ -130,7 +130,7 @@ permalink: /en/kb/561026.html
             <strong>Potentially incompatible attributes</strong>
             <ul>
                 <li>
-                    Applications using PHP 5.3 or older are likely to have compatibility issues
+                    Applications using PHP 5.3 or older are likely to have compatibility issues.
                 </li>
                 <li>
                     Applications using some MVC frameworks (such as CodeIgnitor or Phalcon) that are not fully supported by Lucent Sky AVM yet may have sections that cannot be analyzed and mitigated. Analysis and Instant Fixes will be available for the sections that are supported.
