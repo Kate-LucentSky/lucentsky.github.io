@@ -1,0 +1,133 @@
+﻿---
+layout: default-zh
+title: 如何解決因為編碼問題而造成的掃描錯誤
+description:
+permalink: /zh/kb/561238.html
+---
+
+<section class="bs-docs-section">
+    <h1 id="introduction">
+        介紹
+    </h1>
+    <p>
+        當應用程式存在已非 UTF-8 編碼且包含非拉丁字元的檔案時，編碼可能會造成 Lucent Sky AVM 掃描發生錯誤。在本文中，我們將幫助你了解 Lucent Sky AVM 在掃描時針對編碼的處理方式，以及修正這些錯誤的步驟。
+    </p>
+</section>
+
+<section class="bs-docs-section">
+    <h1 id="more-information">
+        更多資訊
+    </h1>
+    <p>
+    </p>
+    <h2 id="encoding-mechanism">
+        Lucent Sky AVM 處理編碼的機制
+    </h2>
+    <p>
+        在開始之前，我們建議你確實了解應用程式中所使用的語系及編碼方式。
+    </p>
+    <ul>
+        <li>
+            <strong>Java 應用程式</strong>
+            <ul>
+                <li>
+                    Lucent Sky AVM 將會尋找 <strong>org.eclipse.core.resources.prefs</strong> 檔案，這是 Eclipse 所使用的編碼檔案。
+                    <ul>
+                        <li>
+                            若存在 <strong>org.eclipse.core.resources.prefs</strong> 檔案，Lucent Sky AVM 會採用檔案內的設定。若該檔案沒有在檔案中設定，將會使用<strong>掃描參數</strong>的指定編碼、若無該項掃描參數則會採用<strong>系統設定檔</strong>中所設定的編碼、若仍無此項設定，系統將採用 <strong>Windows-1252</strong> 作為該檔案的編碼。
+                        </li>
+                        <li>
+                            若不存在 <strong>org.eclipse.core.resources.prefs</strong> 檔案，將採用和<strong>所有應用程式</strong>相同的偵測方式。
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>所有應用程式</strong>
+            <ul>
+                <li>
+                    Lucent Sky AVM 會偵測各檔案的編碼方式，判斷其為 Unicode（例如：UTF-8）或本地編碼（native encoding，例如：Windows-1252 或 Big-5）。
+                </li>
+                <li>
+                    若應用程式有在<strong>掃描參數</strong>指定編碼，則本地編碼會採用該編碼方式。
+                </li>
+                <li>
+                    若掃描參數沒有指定本地編碼、則本地編碼會採用<strong>系統設定檔</strong>中所設定的編碼。
+                </li>
+                <li>
+                    若系統設定檔中亦沒有設定編碼，則 Lucent Sky AVM 會偵測本地編碼方式。
+                </li>
+                <li>
+                    需要注意的是，當應用程式中存在兩種以上的本地編碼時，系統將會選擇出現次數最多的本地編碼。
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+    <h2 id="troubleshooting">
+        問題排除
+    </h2>
+    <p>
+        當你懷疑因為編碼問題而導致掃描失敗時，我們建議你依照下列步驟排除問題：
+    </p>
+    <ul>
+        <li>
+            <strong>Java 應用程式</strong>
+            <ul>
+                <li>
+                    若存在 <strong>org.eclipse.core.resources.prefs</strong> 檔案，請檢查該檔案是否格式正確、發生問題的程式碼檔案是否被設定成正確的編碼。
+                </li>
+                <li>
+                    若你無法確定 <strong>org.eclipse.core.resources.prefs</strong> 檔案內容的正確性，也可以嘗試刪除該檔案由 Lucent Sky AVM 偵測應用程式的編碼。
+                </li>
+                <li>
+                    若不存在 <strong>org.eclipse.core.resources.prefs</strong> 檔案，請參考下方的「所有應用程式」。
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>所有應用程式</strong>
+            <ul>
+                <li>
+                    確認掃描參數是否有設定編碼？是否為正確的編碼？
+                </li>
+                <li>
+                    確認是否有設定系統編碼？是否為正確的編碼？
+                </li>
+                <li>
+                    確認應用程式內的本地編碼只有一種。若應用程式中存在兩種或以上的本地編碼時，Lucent Sky AVM 將會選擇出現次數最多的本地編碼。
+                </li>
+                <li>
+                    當應用程式包含多種本地編碼時，請將其修改為一致，再重新執行掃描。
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="bs-docs-section">
+    <h1 id="properties">
+        屬性
+    </h1>
+    <p>
+        文章編號：561238 – 上次校閱：2015 年 8 月 13 日 – 版次 1.1
+    </p>
+    <p>
+        <strong>適用於</strong>
+    </p>
+    <ul>
+        <li>
+            Lucent Sky AVM Enterprise 2
+        </li>
+        <li>
+            Lucent Sky AVM Standard 2
+        </li>
+        <li>
+            Lucent Sky AVM On-Demand
+        </li>
+    </ul>
+    <p>
+        <strong>關鍵字</strong>: kbtshoot kbtroubleshoot avm encoding KB561238
+    </p>
+</section>
