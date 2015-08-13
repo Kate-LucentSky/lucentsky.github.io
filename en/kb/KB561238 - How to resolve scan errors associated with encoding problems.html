@@ -1,138 +1,131 @@
-﻿<html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-</head>
-<body>
-    ---
-    layout: default-en
-    title: How to resolve scan errors associated with encoding problems
-    description:
-    permalink: /en/kb/561238.html
-    ---
+﻿---
+layout: default-en
+title: How to resolve scan errors associated with encoding problems
+description:
+permalink: /en/kb/561238.html
+---
 
-    <section class="bs-docs-section">
-        <h1 id="introduction">
-            Introduction
-        </h1>
-        <p>
-            When an application contains files that are not in UTF-8 format but which contain non-ASCII characters, the encoding may cause Lucent Sky AVM to report errors during a scan. In this document, we will help you to understand how Lucent Sky AVM handles character encoding during scans, as well as the steps to take to fix these problems.
-        </p>
-    </section>
+<section class="bs-docs-section">
+    <h1 id="introduction">
+        Introduction
+    </h1>
+    <p>
+        When an application contains files that are not in UTF-8 format but which contain non-ASCII characters, the encoding may cause Lucent Sky AVM to report errors during a scan. In this document, we will help you to understand how Lucent Sky AVM handles character encoding during scans, as well as the steps to take to fix these problems.
+    </p>
+</section>
 
-    <section class="bs-docs-section">
-        <h1 id="more-information">
-            More Information
-        </h1>
-        <p>
-        </p>
-        <h2 id="encoding-mechanism">
-            Lucent Sky AVM's Process for Handling Character Encoding
-        </h2>
-        <p>
-            Before you start a scan, we recommend that you make sure you know your development environment's native character encoding settings and the encoding format used for your project's files.
-        </p>
-        <ul>
-            <li>
-                <strong>Java Applications</strong>
-                <ul>
-                    <li>
-                        Lucent Sky AVM will search for a file named <b>org.eclipse.core.resources.prefs</b>, which is the document that Eclipse uses to keep track of file encoding formats for an application.
-                        <ul>
-                            <li>
-                                If the <b>org.eclipse.core.resources.prefs</b> file exists, Lucent Sky AVM will make use of the character encoding settings contained therein.
-                            </li>
-                            <li>
-                                If the <b>org.eclipse.core.resources.prefs</b> file does not exist, then Lucent Sky AVM will make use of character encoding detection techniques similar to those listed under "All Applications" below.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong>All Applications</strong>
-                <ul>
-                    <li>
-                        Lucent Sky AVM will detect if a file's character encoding format is an Unicode (such as UTF-8) encoding or a native encoding (such as Windows-1252 or Big-5).
-                    </li>
-                    <li>
-                        If a native encoding is set as a scan argument, then that encoding will be used as the native encoding.
-                    </li>
-                    <li>
-                        If no native encoding is set as a scan argument, then the encoding defined in the system configurations file will be used as the native encoding.
-                    </li>
-                    <li>
-                        If there is no encoding defined under system configurations, then Lucent Sky AVM will detect the native encoding of the files.
-                        <br />
-                        Note that when Lucent Sky AVM detects more than two types of native encoding used in an application's files, it will select as a native encoding format that which occurs with the highest frequency.
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <h2 id="troubleshooting">
-            Troubleshooting
-        </h2>
-        <p>
-            If you believe that a scan has failed due to a character encoding problem, we suggest that you follow the following steps to troubleshoot:
-        </p>
-        <ul>
-            <li>
-                <strong>Java Applications</strong>
-                <ul>
-                    <li>
-                        If the file <b>org.eclipse.core.resources.prefs</b> exists, check that its structure is correct, and that the files associated with the error have their encoding format properly specified.
-                    </li>
-                    <li>
-                        If you are not certain that <b>org.eclipse.core.resources.prefs</b> is accurately specifying the encoding format of the file, try removing it from that document in order to make Lucent Sky AVM detect the encoding format of the file.
-                    </li>
-                    <li>
-                        If the <b>org.eclipse.core.resources.prefs</b> does not exist, take the steps listed under "All Applications" below.
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong>All Applications</strong>
-                <ul>
-                    <li>
-                        If a native encoding has been set as a scan argument, check that the argument is correctly specified.
-                    </li>
-                    <li>
-                        If a native encoding has been set in the system configurations, check that it is correctly specified.
-                    </li>
-                    <li>
-                        Check that the application only includes one type of native character encoding. If there are two or more, then Lucent Sky AVM will use that which is detected in the greatest number of source files.
-                    </li>
-                    <li>
-                        When an application contains multiple native encoding formats, consider reformatting some of the files such that they all follow a single character encoding scheme, then run the scan again.
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+<section class="bs-docs-section">
+    <h1 id="more-information">
+        More Information
+    </h1>
+    <p>
+    </p>
+    <h2 id="encoding-mechanism">
+        Lucent Sky AVM's Process for Handling Character Encoding
+    </h2>
+    <p>
+        Before you start a scan, we recommend that you make sure you know your development environment's native character encoding settings and the encoding format used for your project's files.
+    </p>
+    <ul>
+        <li>
+            <strong>Java Applications</strong>
+            <ul>
+                <li>
+                    Lucent Sky AVM will search for a file named <b>org.eclipse.core.resources.prefs</b>, which is the document that Eclipse uses to keep track of file encoding formats for an application.
+                    <ul>
+                        <li>
+                            If the <b>org.eclipse.core.resources.prefs</b> file exists, Lucent Sky AVM will make use of the character encoding settings contained therein.
+                        </li>
+                        <li>
+                            If the <b>org.eclipse.core.resources.prefs</b> file does not exist, then Lucent Sky AVM will make use of character encoding detection techniques similar to those listed under "All Applications" below.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>All Applications</strong>
+            <ul>
+                <li>
+                    Lucent Sky AVM will detect if a file's character encoding format is an Unicode (such as UTF-8) encoding or a native encoding (such as Windows-1252 or Big-5).
+                </li>
+                <li>
+                    If a native encoding is set as a scan argument, then that encoding will be used as the native encoding.
+                </li>
+                <li>
+                    If no native encoding is set as a scan argument, then the encoding defined in the system configurations file will be used as the native encoding.
+                </li>
+                <li>
+                    If there is no encoding defined under system configurations, then Lucent Sky AVM will detect the native encoding of the files.
+                    <br />
+                    Note that when Lucent Sky AVM detects more than two types of native encoding used in an application's files, it will select as a native encoding format that which occurs with the highest frequency.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="troubleshooting">
+        Troubleshooting
+    </h2>
+    <p>
+        If you believe that a scan has failed due to a character encoding problem, we suggest that you follow the following steps to troubleshoot:
+    </p>
+    <ul>
+        <li>
+            <strong>Java Applications</strong>
+            <ul>
+                <li>
+                    If the file <b>org.eclipse.core.resources.prefs</b> exists, check that its structure is correct, and that the files associated with the error have their encoding format properly specified.
+                </li>
+                <li>
+                    If you are not certain that <b>org.eclipse.core.resources.prefs</b> is accurately specifying the encoding format of the file, try removing it from that document in order to make Lucent Sky AVM detect the encoding format of the file.
+                </li>
+                <li>
+                    If the <b>org.eclipse.core.resources.prefs</b> does not exist, take the steps listed under "All Applications" below.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>All Applications</strong>
+            <ul>
+                <li>
+                    If a native encoding has been set as a scan argument, check that the argument is correctly specified.
+                </li>
+                <li>
+                    If a native encoding has been set in the system configurations, check that it is correctly specified.
+                </li>
+                <li>
+                    Check that the application only includes one type of native character encoding. If there are two or more, then Lucent Sky AVM will use that which is detected in the greatest number of source files.
+                </li>
+                <li>
+                    When an application contains multiple native encoding formats, consider reformatting some of the files such that they all follow a single character encoding scheme, then run the scan again.
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
 
-    <section class="bs-docs-section">
-        <h1 id="properties">
-            Properties
-        </h1>
-        <p>
-            Document ID:561238 – Last Revised: August 13, 2015 – Version: 1.1
-        </p>
-        <p>
-            <strong>Applies To:</strong>
-        </p>
-        <ul>
-            <li>
-                Lucent Sky AVM Enterprise 2
-            </li>
-            <li>
-                Lucent Sky AVM Standard 2
-            </li>
-            <li>
-                Lucent Sky AVM On-Demand
-            </li>
-        </ul>
-        <p>
-            <strong>Keywords</strong>: kbtshoot kbtroubleshoot avm encoding KB561238
-        </p>
-    </section>
-</body>
-</html>
+<section class="bs-docs-section">
+    <h1 id="properties">
+        Properties
+    </h1>
+    <p>
+        Document ID:561238 – Last Revised: August 13, 2015 – Version: 1.1
+    </p>
+    <p>
+        <strong>Applies To:</strong>
+    </p>
+    <ul>
+        <li>
+            Lucent Sky AVM Enterprise 2
+        </li>
+        <li>
+            Lucent Sky AVM Standard 2
+        </li>
+        <li>
+            Lucent Sky AVM On-Demand
+        </li>
+    </ul>
+    <p>
+        <strong>Keywords</strong>: kbtshoot kbtroubleshoot avm encoding KB561238
+    </p>
+</section>
