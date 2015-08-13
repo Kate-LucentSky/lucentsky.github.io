@@ -54,7 +54,7 @@ permalink: /en/kb/572813.html
             </ol>
         </li>
         <li>
-            <strong>Package the web application for analysis</strong> - In <strong>File Explorer</strong>, browse to the root directory of the website. Select all files, right-click, select <strong>Send to</strong>, then select <strong>Compressed (zipped) folder</strong>.
+            <strong>Package the web application for scanning</strong> - In File Explorer, browse to the root directory of the website. Select all files, right-click, select <strong>Send to</strong>, then select <strong>Compressed (zipped) folder</strong>.
         </li>
         <li>
             <strong>Start a scan of the web application or website</strong> - In Lucent Sky AVM Web UI, create a new scan and use the zip file created in step 5 as <strong>Source Code Archive</strong>.
@@ -68,13 +68,13 @@ permalink: /en/kb/572813.html
             <strong>Verify the web application is buildable</strong> - In the <strong>Project Explorer</strong> window, right-click on the project and select <strong>Build Project</strong>. Then, right-click on the project and select <strong>Validate</strong>. Make revisions to the source code as necessary to correct for any errors in compilation or validation that occur.
         </li>
         <li>
-            <strong>Verify all referenced JAR files will be exported</strong> - In the <strong>Project Explorer</strong> window, right-click on the project, and select <strong>Properties</strong>, then select <strong>Java Build Path</strong>, then the <strong>Order and Export</strong> tab. Ensure that every JAR dependency referenced by the application is selected, so that these libraries will be placed in the <strong>WEB-INF\lib</strong> directory in the WAR file created in the next step.
+            <strong>Verify all referenced JAR files will be exported</strong> - In the <strong>Project Explorer</strong> window, right-click on the project, select <strong>Properties</strong>, then select <strong>Java Build Path</strong>, then the <strong>Order and Export</strong> tab. Ensure that every JAR file referenced by the application is selected, so that these libraries will be exported in the next step.
         </li>
         <li>
-            <strong>Export the .war file</strong> - In the <strong>Project Explorer</strong> window, right-click on the project and select <strong>Export</strong>. Check the <strong>Export</strong> source files box, then select a name for the project and a destination to which it will be saved.
+            <strong>Export the WAR (.war) file</strong> - In the <strong>Project Explorer</strong> window, right-click on the project and select <strong>Export</strong>. Check <strong>Export source files</strong>, then select a name for the project and a destination to which it will be saved.
         </li>
         <li>
-            <strong>Verify the exported .war file</strong> - Rename the extension of the WAR file from .war to .zip. Open the .zip file and verify that the directory <strong>WEB-INF\lib</strong> contains the project's JAR dependencies, and that the directory <strong>WEB-INF\classes</strong> contains Java source files, not just .class files.
+            <strong>Verify the exported WAR (.war) file</strong> - Rename the extension of the .war file to .zip. Open the .zip file and verify that the directory <strong>WEB-INF\lib</strong> contains the project's JAR dependencies, and that the directory <strong>WEB-INF\classes</strong> contains Java source files, not just .class files.
         </li>
         <li>
             <strong>Start a scan of the web application</strong> - In Lucent Sky AVM Web UI, create a new scan and use the .zip file created in step 4 as <strong>Source Code Archive</strong>.

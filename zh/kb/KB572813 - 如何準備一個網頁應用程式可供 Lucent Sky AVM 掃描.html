@@ -1,0 +1,116 @@
+﻿---
+layout: default-zh
+title: 如何準備可供 Lucent Sky AVM 掃描的網頁應用程式
+description:
+permalink: /zh/kb/572813.html
+---
+
+<section class="bs-docs-section">
+    <h1 id="introduction">
+        介紹
+    </h1>
+    <p>
+        Lucent Sky AVM 在偵測弱點之前，需要先確認應用程式是可以被建置及編譯的。這篇文章將示範如何在將 Web 應用程式的程式碼上傳至 Lucent Sky AVM 掃描之前，發現建置及編譯的問題，同時也概述解決這些問題的步驟。
+    </p>
+</section>
+
+<section class="bs-docs-section">
+    <h1 id="more-information">
+        更多資訊
+    </h1>
+    <p>
+        有許多整合開發環境（integrated development environment，IDE）可以建置網頁應用程式－－包含其類別（class）和網頁（webpage），並識別建置和編譯的問題，像是不正確的語法或缺少檔案及程式庫（library）。使用這個方法的好處是這可以同時確定應用程式的結構符合 Lucent Sky AVM 所支援的格式。描述此內容的步驟如下：
+    </p>
+    <h2 id="dot-net">
+        .NET
+    </h2>
+    <ol>
+        <li>
+            <strong>使用 Visual Studio 開啟網頁應用程式或網頁</strong> - 在 <strong>[檔案]</strong> 目錄下，選擇 <strong>[開啟]</strong>、接著依你的應用程式類型選擇 <strong>[專案/方案]</strong> 或 <strong>[網站]</strong> 選項。接著在視窗中選擇應用程式的根目錄或專案檔後，點選 <strong>[開啟]</strong>。
+        </li>
+        <li>
+            <strong>建置網頁應用程式</strong> – 若這是一個網站，請跳過這個步驟。在 <strong>［方案總管］</strong> 中，以滑鼠右鍵點擊該網頁應用程式，接著在目錄中選擇 <strong>[建置方案]</strong>。此時要確認在建置過程中沒有錯誤產生。如果有發生缺少檔案的錯誤，請選擇 2(a) 或 2(b) 其一的方法來排除：
+            <ol type="a">
+                <li>
+                    將缺少的 User Control 或檔案放置到錯誤訊息中提示缺少的位置。
+                </li>
+                <li>
+                    若已經不再使用該 Web Form，請移除其檔案（.aspx）。
+                </li>
+            </ol>
+            若為其他錯誤，請依照應用程式的需求解析並排除錯誤，重複這個步驟直到不再有錯誤訊息出現。
+        </li>
+        <li>
+            <strong>發行網頁應用程式</strong> - 在<strong>［方案總管］</strong>，以滑鼠右鍵點擊網頁應用程式，接著在目錄中選擇 <strong>[發行網站]</strong>。在 <strong>[發行網站]</strong> 對話方塊中，選擇你要發行網站的位置，接著按下<strong>[確定]</strong>。
+        </li>
+        <li>
+            <strong>確認網站可被發行</strong> - 確認發行過程中沒有錯誤。一旦發行成功，狀態列將出現<strong>發行成功</strong>的訊息。如果有發生缺少檔案的錯誤，請選擇 4(a) 或 4(b) 其一的方法來排除：
+            <ol type="a">
+                <li>
+                    將缺少的 User Control 或 file 放置到錯誤訊息中提示缺少的位置。
+                </li>
+                <li>
+                    若已經不再使用該 Web Form，請移除其檔案（.aspx）。
+                </li>
+            </ol>
+            若為其他錯誤，請依照應用程式的需求解析並排除錯誤，重複這個步驟直到不再有錯誤訊息出現。
+        </li>
+        <li>
+            <strong>準備掃描使用的應用程式檔案</strong> - 在 <strong>[檔案管理員]</strong> 中瀏覽應用程式的根目錄，選取全部的網頁應用程式資料夾及檔案，以滑鼠右鍵點選選擇的檔案，將滑鼠移到 <strong>[傳送到(N)]</strong> 標籤，並選擇 <strong>[壓縮的(Zipped) 資料夾]</strong>。
+        </li>
+        <li>
+            <strong>開始掃描應用程式</strong> - 在 Lucent Sky AVM Web UI 中，建立一個新的掃描並上個步驟中所建立的壓縮檔案作為<strong>程式碼壓縮檔</strong>.
+        </li>
+    </ol>
+    <h2 id="java">
+        Java
+    </h2>
+    <ol>
+        <li>
+            <strong>確認網頁應用程式可被建構</strong> - 在 <strong>Project Explorer</strong> 視窗中，在專案上按一下滑鼠右鍵並選擇 <strong>Build Project</strong>。再來，在專案上按一下滑鼠右鍵並選擇 <strong>Validate</strong>。依需要修改程式碼，直到在編譯和驗證時沒有錯誤產生。
+        </li>
+        <li>
+            <strong>確認所有被參考的 JAR（.jar）檔案都會被匯出</strong> - 在 <strong>Project Explorer</strong> 視窗中，在專案上按一下滑鼠右鍵並選擇 <strong>Properties</strong>，再選擇 <strong>Java Build Path</strong>，接著選擇<strong>Order and Export</strong> 頁籤。確認所有被這個應用程式參考的 JAR 檔案都有被選取，以確保這些函式庫在下個步驟會一起被匯出。
+        </li>
+        <li>
+            <strong>匯出 WAR（.war）檔案</strong> - 在 <strong>Project Explorer</strong> 視窗中，在專案上按一下滑鼠右鍵並選擇 <strong>Export</strong>。勾選 <strong>Export source files</strong>，再為專案取一個名稱以及匯出的目的位置。
+        </li>
+        <li>
+            <strong>確認匯出的 WAR（.war）檔案</strong> - 將匯出的 .war 檔案的附檔名改為 .zip。開啟這個 .zip 檔案並確認 <strong>WEB-INF\lib</strong> 目錄中包含這個專案的 JAR 參照，以及 <strong>WEB-INF\classes</strong> 目錄中包含 Java 程式碼檔案（.java），而不僅是 .class 檔案。
+        </li>
+        <li>
+            <strong>開始掃描應用程式</strong> - 在 Lucent Sky AVM Web UI 中，建立一個新的掃描並上個步驟中所建立的壓縮檔案作為<strong>程式碼壓縮檔</strong>.
+        </li>
+    </ol>
+</section>
+<section class="bs-docs-section">
+    <h1 id="properties">
+        內容
+    </h1>
+    <p>
+        文章編號：572813 – 最後校閱：2015 年 8 月 13 日 – 版次 1.2
+    </p>
+    <p>
+        <strong>適用於</strong>
+    </p>
+    <ul>
+        <li>
+            Lucent Sky AVM Enterprise 2
+        </li>
+        <li>
+            Lucent Sky AVM Standard 2
+        </li>
+        <li>
+            Lucent Sky AVM Enterprise 1
+        </li>
+        <li>
+            Lucent Sky AVM Standard 1
+        </li>
+        <li>
+            Lucent Sky AVM On-Demand
+        </li>
+    </ul>
+    <p>
+        <strong>關鍵字</strong>: kbhowto avm KB572813
+    </p>
+</section>
