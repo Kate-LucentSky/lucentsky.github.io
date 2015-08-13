@@ -29,7 +29,7 @@ permalink: /en/kb/306011.html
 			<strong>Windows Communication Foundation (WCF)</strong>
 			<ul>
 				<li>
-					CLEAR Engine and all kinds of AVM interfaces communicate through WCF, via named pipes, TCP and optionally other WCF channels.
+					CLEAR Engine communicate with its interfaces through WCF, using bindings including named pipes, TCP and optionally other WCF channels.
 				</li>
 			</ul>
 		</li>
@@ -37,7 +37,7 @@ permalink: /en/kb/306011.html
 			<strong>Windows Server 2012 or Windows Server 2012 R2</strong>
 			<ul>
 				<li>
-					CLEAR Engine runs as a Windows Service and Web UI runs on Internet Information Services (IIS). You might need to change settings of Windows Firewall to allow communications between CLEAR Engine and various AVM interfaces.
+					CLEAR Engine runs as a Windows Service and Web UI runs on Internet Information Services (IIS). You might need to change settings of Windows Firewall to allow communications between CLEAR Engine and its interfaces.
 				</li>
 			</ul>
 		</li>
@@ -210,7 +210,7 @@ permalink: /en/kb/306011.html
 	</p>
 	<ol>
 		<li>
-			Double-click on the Lucent Sky AVM server setup file (<strong>CLEAR_x64.exe</strong>). The file will automatically extract and create a <strong>CLEAR_x64</strong> folder at the location of your choice.
+			Double-click on the Lucent Sky AVM Server setup file (<strong>CLEAR_x64.exe</strong>). The file will automatically extract and create a <strong>CLEAR_x64</strong> folder at the location of your choice.
 		</li>
 		<li>
 			Open the folder and double-click the file Setup. The setup program will launch.
@@ -228,7 +228,7 @@ permalink: /en/kb/306011.html
 					<strong>Prerequisites</strong> – Make sure that .NET Framework 3.5, .NET Framework 4.0/4.5 and Internet Information Services (IIS) 7.0 or higher have been installed on the server. If you want to install and setup a new SQL Server Express instance for CLEAR Engine, click <strong>Install SQL Server</strong>. If you want to setup an existing SQL Server instance for CLEAR Engine, click <strong>Use Existing Database</strong>.
 					<ul>
 						<li>
-							<strong>Install SQL Server</strong> – Click <strong>Launch SQL Server Setup</strong> to launch the setup program of SQL Server Express. Follow the setup program to install SQL Server Express, and the setup parameters have been preconfigured so you should be able to accept the default configurations. When the installation is completed, go back to the AVM Server setup program, and then click <strong>Next</strong>.
+							<strong>Install SQL Server</strong> – Click <strong>Launch SQL Server Setup</strong> to launch the setup program of SQL Server Express. Follow the setup program to install SQL Server Express, and the setup parameters have been preconfigured so you should be able to accept the default configurations. When the installation is completed, go back to Lucent Sky AVM Server setup, and then click <strong>Next</strong>.
 						</li>
 						<li>
 							<strong>Setup SQL Server</strong> – Enter the FQDN, IP address, or the computer name, and instance name in <strong>SQL Server</strong> (for example, <em>sqlserver.contoso.com\AVMSQL</em>, where <em>sqlserver.contoso.com</em> is the FQDN of the SQL Server, and <em>AVMSQL</em> is the instance name), select the security model, as well as username and password if necessary, and then click <strong>Next</strong>.
@@ -236,13 +236,13 @@ permalink: /en/kb/306011.html
 					</ul>
 				</li>
 				<li>
-					<strong>Install CLEAR Engine</strong> – Accept the default location for storing application repository, or choose a custom location, and then click <strong>Next</strong>. The AVM Server setup program will become unresponsive for roughly 30 to 60 seconds during this process.
+					<strong>Install CLEAR Engine</strong> – Accept the default location for storing application repository, or choose a custom location, and then click <strong>Next</strong>. Lucent Sky AVM Server setup will become unresponsive for roughly 30 to 60 seconds during this process.
 				</li>
 				<li>
 					<strong>Install Web UI</strong> – To install Web UI on the same server, enter the FQDN or IP that users will be accessing Web UI through in <strong>Web UI FQDN</strong> or <strong>IP address</strong>, and then click <strong>Next</strong>. To install Web UI on another server or to skip its installation, click <strong>Skip</strong>.
 				</li>
 				<li>
-					<strong>Complete</strong> – The AVM Server setup has completed.
+					<strong>Complete</strong> – Lucent Sky AVM Server setup has completed.
 				</li>
 			</ul>
 		</li>
@@ -258,7 +258,7 @@ permalink: /en/kb/306011.html
 			In <strong>Features View</strong>, double-click <strong>Server Certificates</strong>. For the SSL binding of Web UI, you can choose to use a self-signed certificate, to import an existing certificate, or to create a certificate request.
 			<ul>
 				<li>
-					<strong>Creating a self-signed certificate</strong> – Under <strong>Actions</strong>, click <strong>Create Self-Signed Certificate</strong>. In the <strong>Create Self-Signed Certificate</strong> dialog, enter a descriptive name for the certificate, for example, AVM Web UI.
+					<strong>Creating a self-signed certificate</strong> – Under <strong>Actions</strong>, click <strong>Create Self-Signed Certificate</strong>. In the <strong>Create Self-Signed Certificate</strong> dialog, enter a descriptive name for the certificate, for example, Lucent Sky AVM Web UI.
 				</li>
 				<li>
 					<strong>Importing an existing certificate</strong> – Under <strong>Actions</strong>, click Import… and follow the on-screen instructions.
@@ -324,7 +324,7 @@ permalink: /en/kb/306011.html
 		</li>
 	</ol>
 	<h2 id="uninstalling-avm-server">
-		Uninstalling AVM Server
+		Uninstalling Lucent Sky AVM Server
 	</h2>
 	<p>
 		To uninstall CLEAR Engine or Web UI from the server
@@ -337,7 +337,7 @@ permalink: /en/kb/306011.html
 					<strong>Uninstalling CLEAR Engine</strong>: Click Remove CLEAR Engine. This will remove the Windows service. To remove CLEAR Engine and its data completely from the system, manually delete the directory <strong>C:\Program Files\Lucent Sky\CLEAR Engine</strong>, the directory used for repository storage, and the database SkyAnalyzer from SQL Server.
 				</li>
 				<li>
-					<strong>Uninstalling Web UI</strong>: Click Remove Web UI. This will remove the IIS Application Pool and Site. To remove CLEAR Web and its data completely from the system, manually delete the directory <strong>C:\Program Files\Lucent Sky\CLEAR Web</strong>.
+					<strong>Uninstalling Web UI</strong>: Click Remove Web UI. This will remove the IIS Application Pool and Site. To remove Web UI and its data completely from the system, manually delete the directory <strong>C:\Program Files\Lucent Sky\CLEAR Web</strong>.
 				</li>
 			</ul>
 		</li>

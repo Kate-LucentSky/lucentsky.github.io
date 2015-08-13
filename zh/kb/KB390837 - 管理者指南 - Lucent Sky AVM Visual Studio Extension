@@ -1,25 +1,25 @@
 ---
 layout: default
-title: Administration guide to Lucent Sky AVM Visual Studio Extension
+title: 管理者指南 - Lucent Sky AVM Visual Studio Extension
 description: 
-permalink: /en/kb/390837.html
+permalink: /zh/kb/390837.html
 ---
 
 <section class="bs-docs-section">
     <h1 id="introduction">
-        Introduction
+        介紹
     </h1>
-    <p>
-        Lucent Sky AVM has several different UIs designed for developers, including CLI, Visual Studio Extension and Eclipse plug-in. Lucent Sky AVM Visual Studio Extension allows developers to secure their applications in the environment they're familiar with. This guide covers the installation, configuration, administration and removal of Lucent Sky AVM Visual Studio Extension.
+    <p> 
+        Lucent Sky AVM 有數種為了開發者設計的介面，包含：CLI、Visual Studio Extension 及 Eclipse 外掛程式。Lucent Sky AVM Visual Studio Extension 允許開發者在熟悉的環境下偵測並修改弱點。這份指南將說明如何安裝、設定、管理及移除 Lucent Sky AVM Extension。
     </p>
 </section>
 
 <section class="bs-docs-section">
     <h1 id="more-information">
-        More Information
+        更多資訊
     </h1>
     <h2 id="system-requirements">
-        System Requirements
+        系統需求
     </h2>
     <p>
         Processor, memory, hard disk space and operating system requirements:
@@ -27,17 +27,17 @@ permalink: /en/kb/390837.html
             <thead style="background-color: #c8c8c8;">
                 <tr>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                        Components
+                        元件
                     </td>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                        Requirement
+                        需求
                     </td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                        Hard Disk Space
+                        硬碟空間
                     </td>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
                         200 MB
@@ -45,80 +45,80 @@ permalink: /en/kb/390837.html
                 </tr>
                 <tr>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                        Memory
+                        記憶體
                     </td>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                        Minimum: 1 GB (1.5 GB if running inside a virtual machine)
+                        最小值：1 GB（若在虛擬機器中，則為 1.5 GB）
                         <br />
-                        Recommended: 2 GB
+                        建議值：2 GB
                     </td>
                 </tr>
                 <tr>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                        Processor
+                        處理器
                     </td>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                        Minimum: 1.6 GHz processor
+                        最小值：1.6 GHz 處理器
                         <br />
-                        Recommended: 2.0 GHz processor
+                        建議值：2.0 GHz 處理器
                     </td>
                 </tr>
             </tbody>
         </table>
     </p>
     <p>
-        Lucent Sky AVM Server can be installed on the following operating systems:
+        Lucent Sky AVM Server 可以被安裝在下列的作業系統內： 
     </p>
     <ul>
         <li>
-            Windows Server 2012 or Windows Server 2012 R2 Datacenter and Standard
+            Windows Server 2012 或 Windows Server 2012 R2 Datacenter 及 Standard
         </li>
         <li>
-            Windows Server 2008 R2 Datacenter, Enterprise and Standard with SP1
+            Windows Server 2008 R2 Datacenter、Enterprise 及 Standard with SP1
         </li>
     </ul>
     <p>
-        Lucent Sky AVM Visual Studio Extension can be installed with the following versions of Visual Studio:
+        Lucent Sky AVM Visual Studio Extension 支援下列版本的Visual Studio：
     </p>
     <ul>
         <li>
-            Visual Studio 2013 Ultimate, Premium, Professional and Community
+            Visual Studio 2013 Ultimate、Premium、Professional 及 Community
         </li>
         <li>
-            Visual Studio 2012 Ultimate, Premium and Professional
+            Visual Studio 2012 Ultimate、Premium 及 Professional
         </li>
     </ul>
     <p>
-        Visual Studio Express does not support extensions. It is recommended to use Lucent Sky AVM CLI with Visual Studio Express.
+        Lucent Sky AVM Visual Studio Extension 不支援 Visual Studio Express，若你使用 Visual Studio Express ，我們建議你使用 Lucent Sky AVM CLI。
     </p>
     <h2 id="installing-lucent-sky-avm-visual-studio-extension">
-        Installing Lucent Sky AVM Visual Studio Extension
+        安裝 Lucent Sky AVM Visual Studio Extension
     </h2>
     <p>
-        In this section, you will see:
+        本段你將會看到：
     </p>
     <ul>
         <li>
-            A demonstration of how to prepare Visual Studio to communicate with a Lucent Sky AVM Server, and install Lucent Sky AVM Visual Studio Extension on your development computer.
+            Visual Studio 連接至 AVM Server 的準備工作及在開發者電腦上安裝 Lucent Sky AVM Visual Studio Extension 的範例。
         </li>
     </ul>
     <p>
-        At the end of this section, you will be able to:
+        本段結束時，你會知道該如何：
     </p>
     <ul>
         <li>
-            Prepare Visual Studio to communicate with a Lucent Sky AVM Server.
+            Visual Studio 連接至 AVM Server 的準備工作。
         </li>
         <li>
-            Install Lucent Sky AVM Visual Studio Extension on your development computer.
+            在開發者電腦上安裝 Lucent Sky AVM Visual Studio Extension。
         </li>
     </ul>
     <p>
-        <strong>To prepare Visual Studio to communicate with Lucent Sky AVM Server</strong>
+        <strong>Visual Studio 連接至 AVM Server 的準備工作</strong>
     </p>
     <ol>
         <li>
-            Close any Visual Studio instance that's running. Open the Visual Studio configuration file (usually located at <strong>C:\Program Files (x86)\Microsoft Visual Studio <em>11.0</em>\Common7\IDE\devenv.exe.config</strong>, where <em>11.0</em> is the version of Visual Studio) with a text editor. Insert the following configuration just above the end tag </configuration>, where <em>clear.contoso.com</em> is the FQDN of the Lucent Sky AVM Server.
+        1.	關閉所有正在執行的 Visual Studio 視窗後，使用文字編輯器開啟Visual Studio 的組態檔（configuration file）（通常組態檔位於 <strong>C:\Program Files (x86)\Microsoft Visual Studio <em>11.0</em>\Common7\IDE\devenv.exe.config</strong>，其中 <em>11.0</em> 是 Visual Studio 的版本）。在 </configuration> 上方的最尾端插入下列的組態內容，異動的內容為粗體字，其中 <em>clear.contoso.com</em> 是 Lucent Sky AVM 伺服器的完整網域名稱（fully qualified domain name，FQDN）。
             <table>
                 <tr>
                     <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
@@ -167,43 +167,43 @@ permalink: /en/kb/390837.html
                 </tr>
             </table>
             <p>
-                In the configuration above, the communication between Lucent Sky AVM server and Visual Studio is not secured. Consult your system administrator about how to enable transport and/or message security on WCF TCP endpoints.
+                若直接使用上方的組態檔內容，Lucent Sky AVM Server 和 Visual Studio 之間的通訊並不安全，請與系統管理者確認如何啟用在 WCF TCP 終端上啟用 transport 和／或 message 安全性。
             </p>
         </li>
     </ol>
     <p>
-        <strong>To install Lucent Sky AVM Visual Studio Extension</strong>
+        <strong>安裝 Lucent Sky AVM Visual Studio Extension</strong>
     </p>
     <ol>
         <li>
-            Double-click on the AVM Visual Studio Extension setup file (<strong>CLEAR_VSIX.vsix</strong>).
+          	滑鼠左鍵雙擊點 AVM Visual Studio Extension 的安裝檔（<strong>CLEAR_VSIX.vsix</strong>）。
         </li>
         <li>
-            Follow the installation wizard to complete the setup.
+            根據安裝精靈提示的步驟完成安裝。
         </li>
     </ol>
     <h2 id="uninstalling-avm-visual-studio-extension">
-        Uninstalling Lucent Sky AVM Visual Studio Extension
+        解除安裝 Lucent Sky AVM Visual Studio Extension
     </h2>
     <p>
-        <strong>To uninstall AVM Visual Studio Extension</strong>
+        <strong>解除安裝 AVM Visual Studio Extension</strong>
     </p>
     <ol>
         <li>
-            In Visual Studio, click <strong>Extensions and Updates</strong> in the <strong>Tools</strong> menu, locate <strong>Lucent Sky AVM Visual Studio Package</strong> in the list of installed extensions, then click <strong>Uninstall</strong>.
+            在 Visual Studio 中，點選 <strong>[工具]</strong> 目錄內的 <strong>[擴充元件及更新]</strong>、並在清單中選取 <strong>CLEAR Visual Studio Package<strong> 後，選擇 </strong>[移除]<strong>。
         </li>
     </ol>
 </section>
 
 <section class="bs-docs-section">
     <h1 id="properties">
-        Properties
+        內容
     </h1>
     <p>
-        Article ID: 390837 – Last Reviewed: May 31, 2015 – Revision 1.1
+        文章編號：390837 – 上次校閱：2015 年 8 月 11 日 – 版次 1.1
     </p>
     <p>
-        <strong>Applies to</strong>
+        <strong>適用於</strong>
     </p>
     <ul>
         <li>
@@ -220,6 +220,6 @@ permalink: /en/kb/390837.html
         </li>
     </ul>
     <p>
-        <strong>Keywords</strong>: kbguide avm administrative visualstudio vsix KB306011
+        <strong>關鍵字</strong>: kbguide avm administrative visualstudio vsix KB306011
     </p>
 </section>
