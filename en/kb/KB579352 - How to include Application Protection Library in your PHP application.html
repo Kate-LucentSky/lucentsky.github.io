@@ -19,7 +19,7 @@ permalink: /en/kb/579352.html
         More Information
     </h1>
     <p>
-        Application Protection Library for PHP is composed of an initiator PHP file that loads of PHP files. To include them in your application, it's recommended to reference the initiator file using a .htaccess file. This will automatically reference APL in all PHP files. Alternatively, you can also reference the initiator file individually in all PHP files that need to reference APL.
+        Application Protection Library for PHP is composed of an initiator PHP file that loads another PHP files in the library. To include them in your application, it's recommended to reference the initiator file using a .htaccess file. This will automatically reference APL in all PHP files. Alternatively, you can also reference the initiator file individually in all PHP files that need to reference APL.
     </p>
     <p>
         To use a .htaccess file to reference APL:
@@ -32,11 +32,9 @@ permalink: /en/kb/579352.html
             Add the following line to the .htaccess file:
             <table>
                 <tr>
-                    <td style="margin: 5px 0; padding: 0 5px; border-width: 1px; border-style: solid; border-collapse: collapse;">
-                        <div style="font-family: Consolas;">
-                            php_value auto_prepend_file "/APL/ApplicationProtectionLibrary.php"
-                        </div>
-                    </td>
+                    {% highlight powershell %}
+                        php_value auto_prepend_file "/APL/ApplicationProtectionLibrary.php"
+                    {% endhighlight %}
                 </tr>
             </table>
         </li>
