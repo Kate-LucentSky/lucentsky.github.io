@@ -30,13 +30,9 @@ permalink: /en/kb/579352.html
         </li>
         <li>
             Add the following line to the .htaccess file:
-            <table>
-                <tr>
-                    {% highlight powershell %}
-                        php_value auto_prepend_file "/APL/ApplicationProtectionLibrary.php"
-                    {% endhighlight %}
-                </tr>
-            </table>
+            {% highlight powershell %}
+                php_value auto_prepend_file "/APL/ApplicationProtectionLibrary.php"
+            {% endhighlight %}
         </li>
         <li>
             Save the .htaccess file.
@@ -48,11 +44,9 @@ permalink: /en/kb/579352.html
     <ol>
         <li>
             Open a PHP file that need to reference APL, and insert the following at the first line:
-            <div>
-                {% highlight php %}
-                    <?php require('/APL/ApplicationProtectionLibrary.php'); ?>
-                {% endhighlight %}
-            </div>
+            {% highlight php %}
+                <?php require('/APL/ApplicationProtectionLibrary.php'); ?>
+            {% endhighlight %}
         </li>
         <li>
             Repeat step 1 with all PHP files that need to reference APL.
